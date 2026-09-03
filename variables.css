@@ -21,8 +21,82 @@
     --brand-gradient: linear-gradient(90deg,rgba(99, 102, 241, 1) 0%, rgba(139, 92, 246, 1) 50%, rgba(217, 70, 239, 1) 100%);
 
 }
+
+.navbar { /* hela navbaren */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16.4px;   /* osäker på om dessa är korrekta*/
+    padding-right: 16.4px; /* Samma här */
+    padding-top: 7px;
+    height: 52px;
+}
+.logo-container { /* loggan och texten */
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    
+}
+.logo { /* loggan */
+    width: 47px;
+    height: 44px;
+}
+
+.logo-container span { /* texten silicon */
+    font-family: var(--standard-font);
+    font-weight: 800;
+    line-height: 33.3px;
+    font-size: 20.8px;
+    letter-spacing: 0;
+    color: #131022;
+ 
+}
+.switch-and-button { /* switchen och hamburger menyn*/
+ display: flex;
+    align-items: center;
+    gap: 23.6px;
+}
+.menu { /*Hamburger menyn*/
+    width: 30px;
+    height: 36px;
+    border: none;
+    background-color: transparent;
+    
+}
+.menu img { /*Hamburger menyns bild*/
+    
+    display: block;
+}
+.switch { /*Hela switchen*/
+   
+    width: 46px;
+    height: 24px;
+    position: relative;
+}
+ .switch input { /*Döljer checkboxen*/
+         display: none;
+    }
+.slider { /*Själva switchen som man klickar på*/
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background-color: var(--gray-600);
+}
+.slider::before {  /*Själva vita cirekeln som rör sig när man klickar på switchen*/
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:white;
+    left: 2px; 
+    top: 2px;
+    transition: transform 0.3s;
+}
+.switch input:checked + .slider::before {/*När man klickar så rör den sig till göger*/
+    transform: translateX(22px);
+} 
 body {
     font-family: var(--standard-font);
-    color: var(--font-color);
-    background-color: rgb(139, 133, 133) /* TESTAR FÖR ATT SE ICONER */
+   
 }
