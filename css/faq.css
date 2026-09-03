@@ -16,7 +16,7 @@ html {
 
 .faq {
     background-color: white;
-    
+    /* This part is standardization */
     h6 {
         font-size: var(--font-size-h6);
         color: var(--header-color);
@@ -25,7 +25,9 @@ html {
     p {
         color: var(--font-color);
     }
+    /* ^This part is standardization^ */
 
+    /* CSS header logic */
     .faq-header{
         h4 {
             font-size: var(--font-size-h4);
@@ -44,8 +46,10 @@ html {
             font-weight: 200;
         }
     }
+    /* ^CSS header logic^ */
     
-    .faq-body {
+    /* CSS accordion logic */
+    .faq-accordion {
         margin: 0 10px;
         /* display: grid; */
         border: 1px solid var(--border-color);
@@ -114,6 +118,8 @@ html {
         background-color: var(--button-color);
         transition: 0.5s;
     }
+
+    /* Input logic */
     
     .input-quests:checked ~ .faq-answer {
         max-height: 600px;
@@ -139,5 +145,7 @@ html {
         transform: rotate(180deg);
         transition: 0.25s;
     }
+    /* ^Input logic^ */
 }
+    /* ^CSS accordion logic^ */
 
