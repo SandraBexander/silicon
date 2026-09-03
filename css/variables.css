@@ -6,7 +6,25 @@
     --header-color: var(--gray-900);
     --nav-text-color: var(--gray-800);
     --nav-text-color-hover: var(--brand-primary);
+    --border-color: var(--gray-300);
+    --button-color: var(--gray-100);
+    --button-color-toggle: var(--brand-primary);
+    --button-color-hover: var(--brand-primary-overlay);
 
+    --font-size-h1: 40px;
+    --font-size-h2: 32px;
+    --font-size-h3: 28px;
+    --font-size-h4: 24px;
+    --font-size-h5: 20px;
+    --font-size-h6: 16px;
+    --font-weight-header: 800;
+
+    --font-size-lead: 24px;
+    --font-size-xl: 20px;
+    --font-size-l: 18px;
+    --font-size-m: 16px;
+    --font-size-s: 14px;
+    --font-size-xs: 12px;
 
     --gray-100: #F3F6FF;
     --gray-200: #EFF2FC;
@@ -18,6 +36,6 @@
     --gray-800: #33354D;
     --gray-900: #0B0F19;
     --brand-primary: #6366F1;
+    --brand-primary-overlay: rgb(113, 115, 241);
     --brand-gradient: linear-gradient(90deg,rgba(99, 102, 241, 1) 0%, rgba(139, 92, 246, 1) 50%, rgba(217, 70, 239, 1) 100%);
-
 }
