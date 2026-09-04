@@ -50,7 +50,7 @@ html {
     
     /* CSS accordion logic */
     .faq-accordion {
-        margin: 0 10px;
+        margin: 0 15px 50px;
         /* display: grid; */
         border: 1px solid var(--border-color);
         border-radius: 8px;
@@ -65,7 +65,7 @@ html {
             align-items: center;
             min-height: 70px;
             margin: 0;
-            padding: 15px;
+            padding: 15px 20px;
             /* border-bottom: 1px solid var(--border-color); */
         }
     }
@@ -82,7 +82,7 @@ html {
 
         p {
             margin: 0;
-            padding: 15px;
+            padding: 15px 20px;
             text-align: justify;
         }
     }
@@ -131,7 +131,7 @@ html {
 
     .input-quests:not(:checked) ~ .faq-answer {
         transition-property: all;
-        transition-duration: .15s;
+        transition-duration: .25s;
         transition-delay: .15;
         transition-timing-function: ease-out;
     }
@@ -146,6 +146,25 @@ html {
         transition: 0.25s;
     }
     /* ^Input logic^ */
-}
     /* ^CSS accordion logic^ */
+    /* Contact now link */
+    .contact-link {
+        display: flex;
+        justify-content: center;
+        a {
+            background-color: var(--brand-primary);
+            color: white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            height: 50px;
+            border-radius: 8px;
+            font-size: var(--font-size-s)
+        }
+    }
+    /* ^Contact now link^ */
+}
+    
 
