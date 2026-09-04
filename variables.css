@@ -101,23 +101,3 @@
 .switch input:checked + .slider::before {/*När man klickar så rör den sig till göger*/
     transform: translateX(22px);
 } 
-
-.hero {
-    
-}
-.hero h1 {              /*TILLFÄLLIGT*/
-    font-family: var(--standard-font);
-    font-size: 34.1px;
-    line-height: 44.4px;
-    color: #131022;
-    letter-spacing: 0;
-    text-align: center;
-}
-.hero img {      /*TILLFÄLLIGT*/
-   background-color: black;
-   padding: 8px;
-   border-radius: 6px;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
