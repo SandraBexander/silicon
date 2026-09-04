@@ -90,14 +90,19 @@
 .slider::before {  /*Själva vita cirekeln som rör sig när man klickar på switchen*/
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background-color:white;
-    left: 2px; 
-    top: 2px;
+    left: 3px; 
+    top: 3px;
+
     transition: transform 0.3s;
 }
+.switch input:checked + .slider { /*när man trycker blir den blå*/
+    background-color: #6366F1;
+}
+
 .switch input:checked + .slider::before {/*När man klickar så rör den sig till göger*/
     transform: translateX(22px);
 } 
