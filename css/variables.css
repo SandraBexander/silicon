@@ -3,13 +3,19 @@
 :root {
     --standard-font: "Manrope", sans-serif;
     --font-color: var(--gray-700);
+    --font-color-lead: #585C7B;
     --header-color: var(--gray-900);
+
     --nav-text-color: var(--gray-800);
     --nav-text-color-hover: var(--brand-primary);
     --border-color: var(--gray-300);
     --button-color: var(--gray-100);
     --button-color-toggle: var(--brand-primary);
     --button-color-hover: var(--brand-primary-overlay);
+
+    --background-color: white;
+    --background-color-accordion: white;
+    --accordion-arrow-color: #3E4265;
 
     --font-size-h1: 40px;
     --font-size-h2: 32px;
@@ -38,4 +44,16 @@
     --brand-primary: #6366F1;
     --brand-primary-overlay: rgb(113, 115, 241);
     --brand-gradient: linear-gradient(90deg,rgba(99, 102, 241, 1) 0%, rgba(139, 92, 246, 1) 50%, rgba(217, 70, 239, 1) 100%);
+}
+
+[data-theme="dark"] {
+    --background-color: black;
+    --background-color-accordion: #131022;
+    --accordion-arrow-color: var(--gray-400);
+
+    --border-color: rgba(255, 255, 255, 0.15);
+    --button-color: rgba(255, 255, 255, 0.05);
+
+    --header-color: var(--gray-400);
+    --font-color: rgba(255, 255, 255, 0.7);
 }

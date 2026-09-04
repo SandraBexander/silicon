@@ -5,17 +5,16 @@
     box-sizing: border-box;
 }
 
-:root {
-    --font-size-h4: 24px;
-}
-
 html {
     font-size: 16px; 
     font-family: var(--standard-font);
 }
 
+body {
+    background-color: var(--background-color);
+}
+
 .faq {
-    background-color: white;
     /* This part is standardization */
     h6 {
         font-size: var(--font-size-h6);
@@ -42,7 +41,7 @@ html {
             font-size: var(--font-size-l);
             text-align: center;
             padding: 0 20px 40px;
-            color: var(--font-color);
+            color: var(--font-color-lead);
             font-weight: 200;
         }
     }
@@ -50,6 +49,7 @@ html {
     
     /* CSS accordion logic */
     .faq-accordion {
+        background-color: var(--background-color-accordion);
         margin: 0 15px 50px;
         /* display: grid; */
         border: 1px solid var(--border-color);
@@ -99,7 +99,7 @@ html {
     }
 
     .q-label::after {
-        color: black;
+        color: var(--accordion-arrow-color);
         font-family: "bootstrap-icons";
         content: "\F282";
         z-index: 1;
@@ -166,5 +166,3 @@ html {
     }
     /* ^Contact now link^ */
 }
-    
-
