@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-:root {
+:root { odgsadgasdf
     --standard-font: "Manrope", sans-serif;
     --font-color: var(--gray-700);
     --header-color: var(--gray-900);
@@ -90,8 +90,8 @@
 .slider::before {  /*Själva vita cirekeln som rör sig när man klickar på switchen*/
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background-color:white;
     left: 2px; 
