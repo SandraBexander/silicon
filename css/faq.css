@@ -24,6 +24,15 @@ body {
     p {
         color: var(--font-color);
     }
+
+    a {
+        text-decoration: none;
+        color: var(--link-color);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     /* ^This part is standardization^ */
 
     /* CSS header logic */
@@ -48,17 +57,26 @@ body {
     /* ^CSS header logic^ */
     
     /* CSS accordion logic */
-    .faq-accordion {
-        background-color: var(--background-color-accordion);
-        margin: 0 15px 50px;
-        /* display: grid; */
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
+    @media (width < 768px) {
+        .faq-accordion {
+            background-color: var(--background-color-accordion);
+            margin: 0 15px 50px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
     }
+    
+    
     
     .faq-question {
         user-select: none;
-        /* height: 70px; */
+        display: grid;
+        @media (width >= 768px) {
+            margin: 0 15px 15px;
+            background-color: white;
+            box-shadow: 0 4px 8px 2px rgba(19, 16, 34, 0.06);
+            border-radius: 8px;
+        }
         h6 {
             display: grid;
             justify-content: center;
@@ -66,7 +84,6 @@ body {
             min-height: 70px;
             margin: 0;
             padding: 15px 20px;
-            /* border-bottom: 1px solid var(--border-color); */
         }
     }
 
@@ -77,8 +94,11 @@ body {
     .faq-answer {
         max-height: 0;
         overflow: hidden;
-        border-bottom: 1px solid var(--border-color);
-        border-top: 1px solid var(--border-color);
+        @media (width < 768px) {
+            border-bottom: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color);
+        }
+        
 
         p {
             margin: 0;
@@ -147,8 +167,8 @@ body {
     }
     /* ^Input logic^ */
     /* ^CSS accordion logic^ */
-    /* Contact now link */
-    .contact-link {
+    /* Contact links */
+    .contact-link-mobile {
         display: flex;
         justify-content: center;
         a {
@@ -161,8 +181,69 @@ body {
             width: 160px;
             height: 50px;
             border-radius: 8px;
-            font-size: var(--font-size-s)
+            font-size: var(--font-size-s);
+            /* visibility: hidden; */
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        a::after {
+            content: "Contact us now";
+        }
+
+        @media (width >= 768px) {
+            a {
+                visibility: hidden;
+            }
         }
     }
-    /* ^Contact now link^ */
+
+    .contact-links-768up {
+        
+
+        @media (width >= 768px) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        @media (width < 768px) {
+            visibility: hidden;
+        }
+    }
+
+    #contact-phone, #contact-chat {
+        width: 47dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 25px;
+        gap: 20px;
+        font-size: var(--font-size-s);
+
+        a {
+            display: flex;
+            align-items: center;
+            width: 115px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        i {
+            font-size: 1.75em;
+            margin: 0 0 0 15px;
+        }
+    }
+
+    #contact-chat {
+        a {
+            color: var(--link-color-alt);
+        }
+        margin-top: 1px;
+    }
+    /* ^Contact links^ */
 }

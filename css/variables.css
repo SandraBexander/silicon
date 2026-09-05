@@ -5,6 +5,8 @@
     --font-color: var(--gray-700);
     --font-color-lead: #585C7B;
     --header-color: var(--gray-900);
+    --link-color: var(--brand-primary);
+    --link-color-alt: #22C55E;
 
     --nav-text-color: var(--gray-800);
     --nav-text-color-hover: var(--brand-primary);
