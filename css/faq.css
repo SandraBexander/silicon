@@ -34,9 +34,25 @@ body {
         }
     }
     /* ^This part is standardization^ */
-
+    @media (width >= 1440px) {
+        display: grid;
+        grid-template-areas: 
+        'faq-header faq-accordion'
+        'faq-contact faq-accordion';
+        gap: 0 100px;
+        position: absolute;
+        left: 16%;
+        top: 10dvh;
+        height: 900px;
+        width: 67%;
+    }
+    
     /* CSS header logic */
     .faq-header{
+        @media (width >= 1440px) {
+            grid-area: faq-header;
+            
+        }
         h4 {
             font-size: var(--font-size-h4);
             text-align: center;
@@ -44,6 +60,26 @@ body {
             color: var(--header-color);
             font-weight: 800;
             margin-bottom: 16px;
+
+            @media (width >= 768px) {
+                font-size: var(--font-size-h2);    
+            }
+
+            @media (width >= 1440px) {
+                font-size: var(--font-size-h2);   
+                text-align: left;
+                padding: 0;
+                margin: 0 0 50px 15px;
+            }
+        }
+        
+        h4::after {
+            content: "Check out the FAQs";
+            
+            @media (width >= 1440px) {
+                display: block;
+            }
+            
         }
 
         p {
@@ -52,6 +88,13 @@ body {
             padding: 0 20px 40px;
             color: var(--font-color-lead);
             font-weight: 200;
+
+            @media (width >= 1440px) {
+                text-align: left;
+                padding: 0;
+                width: 85%;
+                margin-left: 15px;
+            }
         }
     }
     /* ^CSS header logic^ */
@@ -66,7 +109,13 @@ body {
         }
     }
     
-    
+    @media (width >= 1440px) {
+        .faq-accordion {
+            grid-area: faq-accordion;
+            /* order: 1; */
+            max-width: 50dvw;
+        }
+    }
     
     .faq-question {
         user-select: none;
@@ -200,8 +249,6 @@ body {
     }
 
     .contact-links-768up {
-        
-
         @media (width >= 768px) {
             display: flex;
             justify-content: space-evenly;
@@ -210,10 +257,15 @@ body {
         @media (width < 768px) {
             visibility: hidden;
         }
+
+        @media (width >= 1440px) {
+            grid-area: faq-contact;
+            margin: -400px 0 0 0;
+        }
     }
 
     #contact-phone, #contact-chat {
-        width: 47dvw;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -223,6 +275,7 @@ body {
         padding: 25px;
         gap: 20px;
         font-size: var(--font-size-s);
+        margin: 0 15px;
 
         a {
             display: flex;
@@ -244,6 +297,7 @@ body {
             color: var(--link-color-alt);
         }
         margin-top: 1px;
+        margin-left: 0;
     }
     /* ^Contact links^ */
 }
