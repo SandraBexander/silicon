@@ -5,6 +5,8 @@
     --font-color: var(--gray-700);
     --font-color-lead: #585C7B;
     --header-color: var(--gray-900);
+    --link-color: var(--brand-primary);
+    --link-color-alt: #22C55E;
 
     --nav-text-color: var(--gray-800);
     --nav-text-color-hover: var(--brand-primary);
@@ -14,8 +16,10 @@
     --button-color-hover: var(--brand-primary-overlay);
 
     --background-color: white;
+    --background-color-accordion-mobile: white;
     --background-color-accordion: white;
     --accordion-arrow-color: #3E4265;
+    --background-color-testimonials: var(--gray-100);
 
     --font-size-h1: 40px;
     --font-size-h2: 32px;
@@ -47,13 +51,51 @@
 }
 
 [data-theme="dark"] {
-    --background-color: black;
-    --background-color-accordion: #131022;
+    --background-color: var(--gray-900);
+    --background-color-accordion-mobile: #131022;
+    --background-color-accordion: rgba(255, 255, 255, 0.04);
     --accordion-arrow-color: var(--gray-400);
+    --background-color-testimonials: rgba(255, 255, 255, 0.04);
 
     --border-color: rgba(255, 255, 255, 0.15);
     --button-color: rgba(255, 255, 255, 0.05);
 
     --header-color: var(--gray-400);
     --font-color: rgba(255, 255, 255, 0.7);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    color: var(--header-color);
+    font-weight: var(--font-weight-header);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    color: var(--header-color);
+    font-weight: var(--font-weight-header);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    color: var(--header-color);
+    font-weight: var(--font-weight-header);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+    color: var(--header-color);
+    font-weight: var(--font-weight-header);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+    color: var(--header-color);
+    font-weight: var(--font-weight-header);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+    color: var(--header-color);
+    font-weight: var(--font-weight-header);
 }
