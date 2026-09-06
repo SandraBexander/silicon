@@ -102,7 +102,7 @@ body {
     /* CSS accordion logic */
     @media (width < 768px) {
         .faq-accordion {
-            background-color: var(--background-color-accordion);
+            background-color: var(--background-color-accordion-mobile);
             margin: 0 15px 50px;
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -112,17 +112,16 @@ body {
     @media (width >= 1440px) {
         .faq-accordion {
             grid-area: faq-accordion;
-            /* order: 1; */
             max-width: 50dvw;
         }
     }
     
-    .faq-question {
+    .faq-question { /* Label of the accordion */
         user-select: none;
         display: grid;
         @media (width >= 768px) {
             margin: 0 15px 15px;
-            background-color: white;
+            background-color: var(--background-color-accordion);
             box-shadow: 0 4px 8px 2px rgba(19, 16, 34, 0.06);
             border-radius: 8px;
         }
@@ -136,11 +135,11 @@ body {
         }
     }
 
-    .input-quests {
+    .input-quests { /* hide radio button */
         display: none;
     }
 
-    .faq-answer {
+    .faq-answer { /* Drop down answer of the accordion */
         max-height: 0;
         overflow: hidden;
         @media (width < 768px) {
@@ -156,25 +155,25 @@ body {
         }
     }
 
-    #last-answer {
+    #last-answer {  /* No bottom border for the last question in the accordion */
         border-bottom: none;
     }
 
-    .q-label {
+    .q-label {  /* Accordion label */
         display: flex;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
     }
 
-    .q-label::after {
+    .q-label::after {   /* Arrow icon */
         color: var(--accordion-arrow-color);
         font-family: "bootstrap-icons";
         content: "\F282";
         z-index: 1;
     }
 
-    .q-label-button::after {
+    .q-label-button::after { /* Arrow icon background */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -276,7 +275,7 @@ body {
         gap: 20px;
         font-size: var(--font-size-s);
         margin: 0 15px;
-
+        color: var(--gray-700);
         a {
             display: flex;
             align-items: center;
