@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-:root { odgsadgasdf
+:root { 
     --standard-font: "Manrope", sans-serif;
     --font-color: var(--gray-700);
     --header-color: var(--gray-900);
@@ -26,23 +26,75 @@
     font-family: var(--standard-font);
    
 }
+.container {
+    width: 100%;
+    margin: 0 auto;
+    
+}
 
-.hero {
+.hero .container {
+    display: grid;
+    grid-template-columns: repeat (5, 1fr);
     
 }
 .hero h1 {              /*TILLFÄLLIGT*/
-    font-family: var(--standard-font);
+
     font-size: 34.1px;
     line-height: 44.4px;
     color: #131022;
     letter-spacing: 0;
     text-align: center;
+
+    max-width: 298px;
+    justify-self: center;
+    margin-top: 25px;
+    grid-column: 1 / -1;
+}
+.hero p {
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+    color: #585C7B;
+    letter-spacing: 0;
+    grid-column: 1 / -1;
+    max-width: 361.41px;
+    justify-self: center;
+    margin-top: 18.22px;
+    text-align: center;
+}
+
+.hero a {
+
+    grid-column: 1 / -1; 
+
+    width: 100%;
+    max-width: 366.4px;
+    height: 50.41px;
+
+    justify-self: center;
+    background-color: black;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero a img {
+    display: block;
+    margin: 0 auto;
+   
+   
+    
 }
 .hero img {      /*TILLFÄLLIGT*/
-   background-color: black;
-   padding: 8px;
-   border-radius: 6px;
+   
    display: block;
-   margin-left: auto;
-   margin-right: auto;
+   width: auto;
+   height: auto;
+   margin: 0; 
+}
+.hero p + a {
+    margin-top: 24.75px;
+}
+.hero a + a {
+    margin-top: 16px;
 }
