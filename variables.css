@@ -26,7 +26,11 @@
     font-family: var(--standard-font);
    
 }
+.container {
+    width: 100%;
+    margin: 0 auto;
 
+}
 .navbar { /* hela navbaren */
     display: flex;
     align-items: center;
