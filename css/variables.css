@@ -21,20 +21,20 @@
     --accordion-arrow-color: #3E4265;
     --background-color-testimonials: var(--gray-100);
 
-    --font-size-h1: 40px;
-    --font-size-h2: 32px;
-    --font-size-h3: 28px;
-    --font-size-h4: 24px;
-    --font-size-h5: 20px;
-    --font-size-h6: 16px;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.75rem;
+    --font-size-h4: 1.5rem;
+    --font-size-h5: 1.25rem;
+    --font-size-h6: 1rem;
     --font-weight-header: 800;
 
-    --font-size-lead: 24px;
-    --font-size-xl: 20px;
-    --font-size-l: 18px;
-    --font-size-m: 16px;
-    --font-size-s: 14px;
-    --font-size-xs: 12px;
+    --font-size-lead: 1.5rem;
+    --font-size-xl: 1.25rem;
+    --font-size-l: 1.125rem;
+    --font-size-m: 1rem;
+    --font-size-s: 0.875rem;
+    --font-size-xs: 0.75rem;
 
     --gray-100: #F3F6FF;
     --gray-200: #EFF2FC;
@@ -64,38 +64,43 @@
     --font-color: rgba(255, 255, 255, 0.7);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-header);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+p {
+    line-height: 1.5;
+}
+
 h1 {
     font-size: var(--font-size-h1);
     color: var(--header-color);
-    font-weight: var(--font-weight-header);
 }
 
 h2 {
     font-size: var(--font-size-h2);
     color: var(--header-color);
-    font-weight: var(--font-weight-header);
 }
 
 h3 {
     font-size: var(--font-size-h3);
     color: var(--header-color);
-    font-weight: var(--font-weight-header);
 }
 
 h4 {
     font-size: var(--font-size-h4);
     color: var(--header-color);
-    font-weight: var(--font-weight-header);
 }
 
 h5 {
     font-size: var(--font-size-h5);
     color: var(--header-color);
-    font-weight: var(--font-weight-header);
 }
 
 h6 {
     font-size: var(--font-size-h6);
     color: var(--header-color);
-    font-weight: var(--font-weight-header);
 }
