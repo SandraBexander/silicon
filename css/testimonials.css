@@ -47,8 +47,7 @@ html {
         box-shadow: 0 4px 8px 2px rgba(19, 16, 34, 0.06);
         margin-top: 20px;
         padding: 0 20px 20px 20px;
-        max-height: 33dvh;
-        
+        max-height: 50dvh;
     }
 
     .review-quotes {
