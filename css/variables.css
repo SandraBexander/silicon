@@ -20,4 +20,289 @@
     --brand-primary: #6366F1;
     --brand-gradient: linear-gradient(90deg,rgba(99, 102, 241, 1) 0%, rgba(139, 92, 246, 1) 50%, rgba(217, 70, 239, 1) 100%);
 
+
+
+
+
+} /* Lägg till denna rad */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #171329;
+    background-color: #ffffff;
+}
+
+/* Newsletter */
+
+.fch{
+    width: 100%;
+    min-height: 140px;
+    padding: 40px 12%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: #f4f0fa;
+}
+
+.newsletter h2 {
+    max-width: 300px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+/* Klockikon */
+
+.bell-icon {
+    position: relative;
+    width: 52px;
+    height: 52px;
+}
+
+.bell-shape {
+    position: absolute;
+    top: 13px;
+    left: 9px;
+    width: 32px;
+    height: 31px;
+    background-color: #ffb51b;
+    border-radius: 17px 17px 7px 7px;
+}
+
+.bell-clapper {
+    position: absolute;
+    top: 40px;
+    left: 19px;
+    width: 14px;
+    height: 9px;
+    background-color: #ff9f00;
+    border-radius: 0 0 9px 9px;
+}
+
+.bell-dot {
+    position: absolute;
+    top: 8px;
+    left: 31px;
+    width: 20px;
+    height: 20px;
+    background-color: #6249dd;
+    border-radius: 50%;
+}
+
+/* E-postformulär */
+
+.subscribe-form {
+    width: 300px;
+    height: 32px;
+    margin-left: auto;
+    display: flex;
+}
+
+.email-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    background-color: #ffffff;
+    border: 1px solid #ddd8e7;
+    border-radius: 5px 0 0 5px;
+}
+
+.email-box i {
+    color: #aaa5b5;
+    font-size: 11px;
+}
+
+.email-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 10px;
+}
+
+.email-box input::placeholder {
+    color: #aaa5b5;
+}
+
+.subscribe-form button {
+    width: 90px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: #6e4d4d;
+    background-color: #6658e8;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+.footer {
+    min-height: 360px;
+    padding: 40px 20px 25px;
+    text-align: center;
+    background-color: #ffffff;
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255, 188, 188, 0.12) 0,
+        rgba(255, 188, 188, 0.12) 54px,
+        transparent 54px,
+        transparent 68px
+    );
+    clip-path: ellipse(75% 70% at 50% 30%);
+}
+
+/* Logotyp */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    background: linear-gradient(135deg, #a44dff, #6244d9);
+    clip-path: polygon(
+        50% 0%,
+        100% 25%,
+        92% 76%,
+        50% 100%,
+        8% 76%,
+        0% 25%
+    );
+}
+
+/* Navigation */
+
+.navigation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+}
+
+.navigation a {
+    color: #29233f;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #6658e8;
+}
+
+/* Appknappar */
+
+.app-buttons {
+    margin-top: 44px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.app-button {
+    width: 114px;
+    height: 34px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: #17101e;
+}
+
+.app-button i {
+    font-size: 20px;
+}
+
+.app-button span {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+.app-button span small {
+    margin-bottom: 3px;
+    font-size: 6px;
+}
+
+/* Sociala ikoner */
+
+.social-icons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #55506c;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #f0edf8;
+}
+
+/* Copyright */
+
+.copyright {
+    max-width: 540px;
+    margin: 48px auto 0;
+    color: #aaa5b6;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+mobil
+
+@media (max-width: 700px) {
+    .newsletter {
+        padding: 25px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .newsletter h2 {
+        font-size: 14px;
+    }
+
+    .subscribe-form {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .navigation {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        clip-path: none;
+    }
 }
