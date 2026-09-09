@@ -60,7 +60,16 @@
     color: #131022;
  
 }
-.darkmode-text, 
+
+.darkmode-text {
+display: none;
+font-family: var(--standard-font);
+font-size: 16px;
+font-weight: 600;
+line-height: 25.6px;
+color: #131022;
+} 
+
 .sign-in {
     display: none;
 
@@ -117,3 +126,51 @@
 .switch input:checked + .slider::before {/*När man klickar så rör den sig till göger*/
     transform: translateX(22px);
 } 
+
+@media (min-width: 768px) {         /* För tablets */
+    .navbar {
+        padding-left: 19px;
+        padding-right: 19.4px;
+    }
+
+
+    .darkmode-text {
+        display: inline;
+    }
+   
+.logo-container span {
+    font-size: 24.4px;
+    line-height: 34.2px;
+}
+.menu {
+    margin-left: 46px;
+}
+}
+
+@media (min-width: 1440px) {         /* För dator */
+    .container {
+        max-width: 1296px;
+        margin: 0 auto;
+    }
+    
+    .navbar {
+        height: 76px;
+        
+    }
+    .menu {
+        display: none;
+    }
+    .darkmode-text {
+        margin-right: 12px;
+        Color:var(--gray-700)
+    }
+    .sign-in {
+        display: inline;
+        font-family: var(--standard-font);
+        margin-left: 32px;
+       
+}
+.switch-and-button {
+    gap: 0;
+}
+}
