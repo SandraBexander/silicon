@@ -92,6 +92,10 @@
    height: auto;
    margin: 0; 
 }
+.hero .hero-phone {
+    display:none;
+}
+
 .hero p + a {
     margin-top: 24.75px;
 }
