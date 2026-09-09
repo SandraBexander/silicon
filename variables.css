@@ -60,6 +60,11 @@
     color: #131022;
  
 }
+.darkmode-text, 
+.sign-in {
+    display: none;
+
+}
 .switch-and-button { /* switchen och hamburger menyn*/
     
     display: flex;
