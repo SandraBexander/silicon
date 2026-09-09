@@ -36,6 +36,10 @@ html {
         color: var(--font-color);
         margin: 0;
         text-align: justify;
+
+        @media (width >= 2560px) {
+                font-size: var(--font-size-lead);
+            }
     }
 
     .reviews {
@@ -80,11 +84,17 @@ html {
         align-items: center;
         h6 {
             margin: 0;
+            @media (width >= 2560px) {
+                font-size: var(--font-size-h5);
+            }
         }
         p {
             font-size: var(--font-size-s);
             color: var(--gray-600);
             margin: 0;
+            @media (width >= 2560px) {
+                font-size: var(--font-size-xl);
+            }
         }
         margin-bottom: 10px;
     }
@@ -98,6 +108,6 @@ html {
     }
 
     @media (width < 1440px) {
-        visibility: hidden;
+        display: none;
     }
 }
