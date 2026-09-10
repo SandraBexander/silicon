@@ -1,3 +1,4 @@
+/* uppdaterad av Qustan */
 :root{
   --ink:#211A3E;
   --ink-soft:#5B5478;
@@ -15,7 +16,7 @@ body{
   color:var(--ink);
 }
 .wrap{
-  max-width:900px;
+  max-width:1200px;
   margin:0 auto;
   padding:24px;
 }
@@ -87,4 +88,10 @@ body{
   .subscribe{ flex-direction:column; align-items:flex-start; }
   .subscribe-form{ width:100%; }
   .subscribe-form input{ flex:1; width:auto; }
+}
+.flex {
+ height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
