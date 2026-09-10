@@ -118,7 +118,7 @@
     .hero-content {
         grid-column: 1;
         text-align: left;
-        padding-top: 70px;
+       
         margin-left:31.2px;
     }
 
@@ -130,7 +130,7 @@
         line-height: 57.6px;
         max-width: none;
         width: 442px;
-        margin-top: 34px;
+        margin-top: 28px;
        
     }
 
@@ -194,7 +194,7 @@
         height: 417px;
 
         margin-left: -63.62px;
-        margin-top: 51px;
+        
     }
      .phone-back,
      .phone-front {
