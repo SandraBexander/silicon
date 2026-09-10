@@ -40,8 +40,8 @@ body{
 }
 .bell{
   flex:none;
-  width: 30px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   border-radius:10px;
   background:linear-gradient(135deg,#FFD36E,#FF9A3E);
   display:flex;
