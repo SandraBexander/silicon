@@ -46,6 +46,10 @@ body {
             grid-template-columns: 5fr 7fr;
             align-items: start;
         }
+        @media (width >= 1440px) {
+            max-width: 1296px;
+            margin: 0 auto;
+        }
     }
 
     h1 {
@@ -56,7 +60,6 @@ body {
         text-align: center;
         max-width: 298px;
         justify-self: center;
-        margin-top: 25px;
         grid-column: 1 / -1;
 
         @media (width >= 768px) {
@@ -68,6 +71,19 @@ body {
             max-width: none;
             width: 442px;
             margin-top: 28px;
+        }
+
+        @media (width >=1440px) {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--gray-900);
+            line-height: 72.8px;
+            width: 526px;
+            margin-top:148px;
+            margin-bottom: 0;
+            max-width: none;
+            text-align: left;
+            justify-self: start;
         }
     }
 
@@ -93,9 +109,18 @@ body {
             margin-top: 95.51px;
             margin-bottom: 40.4px;
             text-align: left;
+            justify-self: start;
         }
+         @media (width >=1440px) {
+            width: 526px;
+            max-width: none;
+            margin-top:24px;
+            margin-bottom: 0;
+            font-size: 18px;
+            line-height: 28.8px;
+            color: var(--gray-700);
     }
-
+    }
     a {
         grid-column: 1 / -1;
         width: 100%;
@@ -140,38 +165,41 @@ body {
 
         overflow: hidden;
     }
-}
+    @media (width >= 1440px) {
+        height: 800px;
+    }
 
-
-
-.hero-content {
+    .hero-content {
 
     @media (width >= 768px) {
         grid-column: 1;
         text-align: left;
         margin-left: 31.2px;
     }
+
+     @media (width >= 1440px) {
+        margin-left: 0;
+        justify-self: start;
+    }
 }
-
-
-
 .tablet-break {
     display: none;
 
     @media (width >= 768px) {
         display: inline;
     }
-}
-
-
-
-.store-buttons {
+}.store-buttons {
 
     @media (width >= 768px) {
         display: flex;
         align-items: center;
         gap: 16px;
         margin-top: 40.4px;
+    }
+
+    @media (width >= 1440px) {
+        margin-top: 48px;
+        gap: 24px;
     }
 
     img {
@@ -189,10 +217,20 @@ body {
                 height: 43.9px;
             }
 
+            @media (width >= 1440px) {
+                width: 180px;
+                height: 52px;
+            }
+
             img {
                 @media (width >= 768px) {
                     width: 92.4px;
                     height: auto;
+                }
+
+                @media (width >= 1440px) {
+                    width: 136px;
+                    height: 35.42px;
                 }
             }
         }
@@ -203,17 +241,31 @@ body {
                 height: 43.95px;
             }
 
+            @media (width >= 1440px) {
+                width: 180px;
+                height: 52px;
+            }
+
             img {
                 @media (width >= 768px) {
                     width: 104.4px;
                     height: auto;
+                }
+
+                @media (width >= 1440px) {
+                    height: 35.42px;
+                    width: auto;
                 }
             }
         }
     }
 }
 
- /*Får ha dessa utanför, får inte till det annars*/
+} /* ← stänger .hero */
+
+
+/* Får ha dessa utanför, får inte till det annars */
+
 .phones {
     display: none;
 
@@ -225,10 +277,14 @@ body {
         height: 417px;
         margin-left: -63.62px;
     }
+     @media (width >= 1440px) { /*ENDAST TEST palcering av telefon*/
+        margin-top: -250px;
+        margin-left:138.71px;
+   
+    }
 
     .phone-back,
     .phone-front {
-
         @media (width >= 768px) {
             filter: drop-shadow(
                 0 4px 4px rgba(0, 0, 0, 0.25)
@@ -237,7 +293,6 @@ body {
     }
 
     .phone-back {
-
         @media (width >= 768px) {
             position: absolute;
             left: 69.51px;
@@ -246,17 +301,25 @@ body {
             height: 485.28px;
             z-index: 1;
         }
+         @media (width >= 1440px) {
+        width: 395.97px;
+        height: 800.65px;
+    }
     }
 
     .phone-front {
-
         @media (width >= 768px) {
             position: absolute;
             left: 208.26px;
-            top: 0;
+            top: 7px;
             width: 243.74px;
             height: 493.02px;
             z-index: 2;
         }
+            @media (width >= 1440px) {
+        width: 402.29px;
+        height: 813.42px;
+        
+    }
     }
 }
