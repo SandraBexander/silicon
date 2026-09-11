@@ -14,289 +14,62 @@ body {
     background-color: var(--background-color);
 }
 
-.faq {
-    /* This part is standardization */
-    h6 {
-        font-size: var(--font-size-h6);
-        color: var(--header-color);
-    }
-
-    p {
-        color: var(--font-color);
-    }
-
-    a {
-        text-decoration: none;
-        color: var(--link-color);
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    /* ^This part is standardization^ */
-    @media (width >= 1440px) {
-        display: grid;
-        grid-template-areas: 
-        'faq-header faq-accordion'
-        'faq-contact faq-accordion';
-        gap: 0 100px;
-        position: absolute;
-        left: 16%;
-        top: 10dvh;
-        height: 900px;
-        width: 67%;
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: 100dvw;
+    max-width: 92.5%;
+    @media (width >=1440px) {
+        max-width: 67.5%;
     }
     
-    /* CSS header logic */
-    .faq-header{
-        @media (width >= 1440px) {
-            grid-area: faq-header;
-            
+}
+
+#faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #faq-header {
+        grid-column: span 12;
+        @media (width >= 768px) {
+            grid-column: 3/span 8;
         }
         h4 {
-            font-size: var(--font-size-h4);
+            
             text-align: center;
-            padding: 10px 40px 0;
-            color: var(--header-color);
-            font-weight: 800;
-            margin-bottom: 16px;
+            padding: 0 30px;
 
             @media (width >= 768px) {
-                font-size: var(--font-size-h2);    
+                font-size: var(--font-size-h2);
+                text-wrap: balance;
             }
 
             @media (width >= 1440px) {
-                font-size: var(--font-size-h2);   
                 text-align: left;
                 padding: 0;
                 margin: 0 0 50px 15px;
             }
         }
         
-        h4::after {
-            content: "Check out the FAQs";
-            
-            @media (width >= 1440px) {
-                display: block;
-            }
-            
+        
+    }
+
+    #faq-contact-text {
+        grid-column: span 12;
+        @media (width >= 768px) {
+            grid-column: 3/span 8;
         }
 
         p {
             font-size: var(--font-size-l);
             text-align: center;
-            padding: 0 20px 40px;
-            color: var(--font-color-lead);
-            font-weight: 200;
-
-            @media (width >= 1440px) {
-                text-align: left;
-                padding: 0;
-                width: 85%;
-                margin-left: 15px;
-            }
-        }
-    }
-    /* ^CSS header logic^ */
-    
-    /* CSS accordion logic */
-    @media (width < 768px) {
-        .faq-accordion {
-            background-color: var(--background-color-accordion-mobile);
-            margin: 0 15px 50px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-        }
-    }
-    
-    @media (width >= 1440px) {
-        .faq-accordion {
-            grid-area: faq-accordion;
-            max-width: 50dvw;
-        }
-    }
-    
-    .faq-question { /* Label of the accordion */
-        user-select: none;
-        display: grid;
-        @media (width >= 768px) {
-            margin: 0 15px 15px;
-            background-color: var(--background-color-accordion);
-            box-shadow: 0 4px 8px 2px rgba(19, 16, 34, 0.06);
-            border-radius: 8px;
-        }
-        h6 {
-            display: grid;
-            justify-content: center;
-            align-items: center;
-            min-height: 70px;
-            margin: 0;
-            padding: 15px 20px;
-        }
-    }
-
-    .input-quests { /* hide radio button */
-        display: none;
-    }
-
-    .faq-answer { /* Drop down answer of the accordion */
-        max-height: 0;
-        overflow: hidden;
-        @media (width < 768px) {
-            border-bottom: 1px solid var(--border-color);
-            border-top: 1px solid var(--border-color);
-        }
-        
-
-        p {
-            margin: 0;
-            padding: 15px 20px;
-            text-align: justify;
-        }
-    }
-
-    #last-answer {  /* No bottom border for the last question in the accordion */
-        border-bottom: none;
-    }
-
-    .q-label {  /* Accordion label */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .q-label::after {   /* Arrow icon */
-        color: var(--accordion-arrow-color);
-        font-family: "bootstrap-icons";
-        content: "\F282";
-        z-index: 1;
-    }
-
-    .q-label-button::after { /* Arrow icon background */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 35px;
-        width: 35px;
-        min-height: 35px;
-        min-width: 35px;
-        margin: 0 20px 0 0;
-        border-radius: 50%;
-        background-color: var(--button-color);
-        transition: 0.5s;
-    }
-
-    /* Input logic */
-    
-    .input-quests:checked ~ .faq-answer {
-        max-height: 600px;
-        transition-property: all;
-        transition-duration: .25s;
-        transition-delay: 0;
-        transition-timing-function: ease-in;
-    }
-
-    .input-quests:not(:checked) ~ .faq-answer {
-        transition-property: all;
-        transition-duration: .25s;
-        transition-delay: .15;
-        transition-timing-function: ease-out;
-    }
-
-    .input-quests:checked + .q-label-button::after {
-        background-color: var(--button-color-toggle);
-        transition: 0.25s;
-    }
-
-    .input-quests:checked + .q-label::after {
-        transform: rotate(180deg);
-        transition: 0.25s;
-    }
-    /* ^Input logic^ */
-    /* ^CSS accordion logic^ */
-    /* Contact links */
-    .contact-link-mobile {
-        display: flex;
-        justify-content: center;
-        a {
-            background-color: var(--brand-primary);
-            color: white;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 160px;
-            height: 50px;
-            border-radius: 8px;
-            font-size: var(--font-size-s);
-            /* visibility: hidden; */
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-        a::after {
-            content: "Contact us now";
-        }
-
-        @media (width >= 768px) {
-            a {
-                visibility: hidden;
+            padding: 0 10px;
+            
+            @media (width >= 768px) {
+                padding: 0 40px;
             }
         }
     }
 
-    .contact-links-768up {
-        @media (width >= 768px) {
-            display: flex;
-            justify-content: space-evenly;
-        }
-        
-        @media (width < 768px) {
-            visibility: hidden;
-        }
-
-        @media (width >= 1440px) {
-            grid-area: faq-contact;
-            margin: -400px 0 0 0;
-        }
-    }
-
-    #contact-phone, #contact-chat {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        padding: 25px;
-        gap: 20px;
-        font-size: var(--font-size-s);
-        margin: 0 15px;
-        color: var(--gray-700);
-        a {
-            display: flex;
-            align-items: center;
-            width: 115px;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-        i {
-            font-size: 1.75em;
-            margin: 0 0 0 15px;
-        }
-    }
-
-    #contact-chat {
-        a {
-            color: var(--link-color-alt);
-        }
-        margin-top: 1px;
-        margin-left: 0;
-    }
-    /* ^Contact links^ */
 }
