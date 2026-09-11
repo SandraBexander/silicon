@@ -173,4 +173,20 @@ color: #131022;
 .switch-and-button {
     gap: 0;
 }
+
+@media (min-width: 1440px) {
+    .navbar { /*BEHÖVER LÄGGA BAKGRUNDSFÄRG NÄR JAG HAR MERGAT*/
+        max-width: 1296px;
+        height: 76px;
+        margin: auto;
+    }
+    .darkmode-text {
+        margin-right: 16px;
+    }
+    .sign-in {
+        width: 140px;
+        height: 36px;
+        margin-left: 32px;
+    }
+}
 }
