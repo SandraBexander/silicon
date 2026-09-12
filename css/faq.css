@@ -14,7 +14,7 @@ body {
     background-color: var(--background-color);
 }
 
-.grid-12 {
+.grid-12 { /* 12 grid system to line up elements */
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1.5rem;
@@ -30,8 +30,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    #faq-header {
-        grid-column: span 12;
+    #faq-header { /* FAQ Header */
+        grid-column: 2 / span 10;
         @media (width >= 768px) {
             grid-column: 3/span 8;
         }
@@ -51,11 +51,129 @@ body {
                 margin: 0 0 50px 15px;
             }
         }
-        
-        
     }
 
-    #faq-contact-text {
+
+
+
+    /* CSS accordion logic */
+    #faq-accordion { /* Accordion label */
+        grid-column: span 12;
+        .input-quests { /* Hide radio button */
+            display: none;
+        }
+
+        user-select: none;
+
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        @media (width >= 768px) {
+            display: grid;
+            border: none;
+            gap: 1rem;
+        }
+    }
+
+    .faq-question {
+        background-color: var(--background-color-accordion);
+        @media (width >= 768px) {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        h6 {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            min-height: 70px;
+        }
+    }
+
+    /* Dropdown Arrow */
+    .q-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        @media (width < 768px) {
+            border-bottom: 1px solid var(--border-color);
+        }
+    }
+    .q-label::after {   /* Arrow icon */
+        color: var(--accordion-arrow-color);
+        font-family: "bootstrap-icons";
+        content: "\F282";
+        z-index: 1;
+    }
+    .q-label-button::after { /* Arrow icon background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        width: 35px;
+        min-height: 35px;
+        min-width: 35px;
+        margin: 0 20px 0 0;
+        border-radius: 50%;
+        background-color: var(--button-color);
+        transition: 0.5s;
+    }
+    /* ^Dropdown Arrow^ */
+
+    .faq-answer { /* Dropdown answer portion of the accordion */
+        max-height: 0;
+        overflow: hidden;
+            @media (width < 768px) {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        transition-property: all;
+        transition-duration: .25s;
+        transition-timing-function: ease-in;
+
+        p {
+            margin: 0;
+            padding: 15px 20px;
+            text-align: justify;
+        }
+    }
+
+    .last-faq {  /* No bottom border for the last question in the accordion */
+        border-bottom: none;
+    }
+
+    /* Input logic */
+    .input-quests:checked ~ .faq-answer {
+        max-height: 600px;
+        transition-property: all;
+        transition-duration: .25s;
+        transition-delay: 0;
+        transition-timing-function: ease-in;
+    }
+
+    .input-quests:checked + .q-label-button::after {
+        background-color: var(--button-color-toggle);
+        transition: 0.25s;
+    }
+
+    .input-quests:checked + .q-label::after {
+        transform: rotate(180deg);
+        transition: 0.25s;
+    }
+
+    @media (width >= 768px) {
+        .input-quests:checked + .q-label {
+            border-bottom: 1px solid var(--border-color);
+        }
+    }
+
+    .input-quests:checked + .last-faq {  /* No bottom border for the last question in the accordion */
+        border-bottom: 1px solid var(--border-color);
+    }
+    /* ^Input logic^ */
+    /* ^CSS accordion logic^ */
+    /* Contact links */
+    #faq-contact-text { /* Text part only */
         grid-column: span 12;
         @media (width >= 768px) {
             grid-column: 3/span 8;
@@ -71,5 +189,48 @@ body {
             }
         }
     }
+
+
+    #faq-contact-mobile {
+        grid-column: 4 / span 6;
+        a {
+            display: block;
+            background-color: var(--brand-primary);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            border-radius: 8px;
+        }
+
+        @media (width >= 768px) {
+            display: none;
+        }
+    }
+
+    .contact-link-768up {
+        grid-column: span 6;
+        @media (width < 768px) {
+            display: none;
+        }
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 25px 40px;
+        transition: all 0.25s;
+        &:hover {
+            text-decoration: none;
+            @media (width >= 1440px) {
+                box-shadow: 6px 6px 8px 2px var(--card-hover-shadow);
+                transform: scale(1.02);
+                transition: all 0.25s;
+            }
+            
+        }
+        
+    }
+
+    #contact-chat {
+        color: var(--link-color-alt);
+    }
+
 
 }

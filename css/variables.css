@@ -16,8 +16,8 @@
     --button-color-hover: var(--brand-primary-overlay);
 
     --background-color: white;
-    --background-color-accordion-mobile: white;
     --background-color-accordion: white;
+    --card-hover-shadow: rgba(19, 16, 34, 0.06);
     --accordion-arrow-color: #3E4265;
     --background-color-testimonials: var(--gray-100);
 
@@ -52,10 +52,10 @@
 
 [data-theme="dark"] {
     --background-color: var(--gray-900);
-    --background-color-accordion-mobile: #131022;
-    --background-color-accordion: rgba(255, 255, 255, 0.04);
+    --background-color-accordion: #131022;
     --accordion-arrow-color: var(--gray-400);
     --background-color-testimonials: rgba(255, 255, 255, 0.04);
+    --card-hover-shadow: rgba(122, 109, 183, 0.06);
 
     --border-color: rgba(255, 255, 255, 0.15);
     --button-color: rgba(255, 255, 255, 0.05);
