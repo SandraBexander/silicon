@@ -35,8 +35,11 @@ body {
         @media (width >= 768px) {
             grid-column: 3/span 8;
         }
+        @media (width >= 1440px) {
+            grid-column: 1 / span 4;
+        }
+
         h4 {
-            
             text-align: center;
             padding: 0 30px;
 
@@ -48,17 +51,19 @@ body {
             @media (width >= 1440px) {
                 text-align: left;
                 padding: 0;
-                margin: 0 0 50px 15px;
             }
         }
     }
 
 
-
-
     /* CSS accordion logic */
     #faq-accordion { /* Accordion label */
         grid-column: span 12;
+        @media (width >= 1440px) {
+            grid-column: 6 / span 7;
+            order: 1;
+        }
+
         .input-quests { /* Hide radio button */
             display: none;
         }
@@ -178,6 +183,9 @@ body {
         @media (width >= 768px) {
             grid-column: 3/span 8;
         }
+        @media (width >= 1440px) {
+            grid-column: 1/span 4;
+        }
 
         p {
             font-size: var(--font-size-l);
@@ -186,6 +194,11 @@ body {
             
             @media (width >= 768px) {
                 padding: 0 40px;
+            }
+
+            @media (width >= 1440px) {
+                text-align: left;
+                padding: 0;
             }
         }
     }
@@ -209,12 +222,17 @@ body {
 
     .contact-link-768up {
         grid-column: span 6;
+
         @media (width < 768px) {
             display: none;
         }
+
+        max-height: 160px;
+
         border: 1px solid var(--border-color);
         border-radius: 8px;
-        padding: 25px 40px;
+
+        padding: 1.5rem;
         transition: all 0.25s;
         &:hover {
             text-decoration: none;
@@ -225,11 +243,24 @@ body {
             }
             
         }
+
+        p {
+            font-size: var(--font-size-s);
+        }
         
+    }
+
+    #contact-phone {
+        @media (width >= 1440px) {
+            grid-column: 1/span 2;
+        }
     }
 
     #contact-chat {
         color: var(--link-color-alt);
+        @media (width >= 1440px) {
+            grid-column: 3/span 2;
+        }
     }
 
 
