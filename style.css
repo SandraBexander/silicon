@@ -16,7 +16,7 @@ body{
   color:var(--ink);
 }
 .wrap{
-  max-width:900px;
+  max-width:1200px;
   margin:0 auto;
   padding:24px;
 }
@@ -40,8 +40,8 @@ body{
 }
 .bell{
   flex:none;
-  width: 30px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   border-radius:10px;
   background:linear-gradient(135deg,#FFD36E,#FF9A3E);
   display:flex;
@@ -88,4 +88,10 @@ body{
   .subscribe{ flex-direction:column; align-items:flex-start; }
   .subscribe-form{ width:100%; }
   .subscribe-form input{ flex:1; width:auto; }
+}
+.flex {
+ height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
