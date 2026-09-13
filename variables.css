@@ -25,6 +25,18 @@
         rgba(139, 92, 246, 1) 50%,
         rgba(217, 70, 239, 1) 100%
     );
+
+    /* Hero */
+    --hero-title: #131022;
+    --hero-text: #585C7B;
+    --button-bg: #000000;
+    --hero-bg: radial-gradient(
+        circle,
+        rgba(99, 102, 241, 0.10) 0%,
+        rgba(218, 70, 239, 0.05) 42%,
+        rgba(241, 244, 253, 0.07) 83%
+    );
+    --phone-shadow: rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -46,6 +58,7 @@ body {
             grid-template-columns: 5fr 7fr;
             align-items: start;
         }
+
         @media (width >= 1440px) {
             max-width: 1296px;
             margin: 0 auto;
@@ -55,7 +68,7 @@ body {
     h1 {
         font-size: 34.1px;
         line-height: 44.4px;
-        color: #131022;
+        color: var(--hero-title);
         letter-spacing: 0;
         text-align: center;
         max-width: 298px;
@@ -91,7 +104,7 @@ body {
         width: 100%;
         font-size: 18px;
         line-height: 28px;
-        color: #585C7B;
+        color: var(--hero-text);
         letter-spacing: 0;
         grid-column: 1 / -1;
         max-width: 361.41px;
@@ -111,7 +124,8 @@ body {
             text-align: left;
             justify-self: start;
         }
-         @media (width >=1440px) {
+
+        @media (width >=1440px) {
             width: 526px;
             max-width: none;
             margin-top:24px;
@@ -119,15 +133,16 @@ body {
             font-size: 18px;
             line-height: 28.8px;
             color: var(--gray-700);
+        }
     }
-    }
+
     a {
         grid-column: 1 / -1;
         width: 100%;
         max-width: 366.4px;
         height: 50.41px;
         justify-self: center;
-        background-color: black;
+        background-color: var(--button-bg);
         border-radius: 6px;
         display: flex;
         align-items: center;
@@ -156,112 +171,110 @@ body {
     }
 
     @media (width >= 768px) {
-        background: radial-gradient(
-            circle,
-            rgba(99, 102, 241, 0.10) 0%,
-            rgba(218, 70, 239, 0.05) 42%,
-            rgba(241, 244, 253, 0.07) 83%
-        );
-
+        background: var(--hero-bg);
         overflow: hidden;
     }
+
     @media (width >= 1440px) {
         height: 800px;
     }
 
     .hero-content {
 
-    @media (width >= 768px) {
-        grid-column: 1;
-        text-align: left;
-        margin-left: 31.2px;
-    }
-
-     @media (width >= 1440px) {
-        margin-left: 0;
-        justify-self: start;
-    }
-}
-.tablet-break {
-    display: none;
-
-    @media (width >= 768px) {
-        display: inline;
-    }
-}.store-buttons {
-
-    @media (width >= 768px) {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-top: 40.4px;
-    }
-
-    @media (width >= 1440px) {
-        margin-top: 48px;
-        gap: 24px;
-    }
-
-    img {
         @media (width >= 768px) {
-            width: auto;
-            height: auto;
+            grid-column: 1;
+            text-align: left;
+            margin-left: 31.2px;
+        }
+
+        @media (width >= 1440px) {
+            margin-left: 0;
+            justify-self: start;
         }
     }
 
-    a {
+    .tablet-break {
+        display: none;
 
-        &:first-child {
+        @media (width >= 768px) {
+            display: inline;
+        }
+    }
+
+    .store-buttons {
+
+        @media (width >= 768px) {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 40.4px;
+        }
+
+        @media (width >= 1440px) {
+            margin-top: 48px;
+            gap: 24px;
+        }
+
+        img {
             @media (width >= 768px) {
-                width: 126px;
-                height: 43.9px;
-            }
-
-            @media (width >= 1440px) {
-                width: 180px;
-                height: 52px;
-            }
-
-            img {
-                @media (width >= 768px) {
-                    width: 92.4px;
-                    height: auto;
-                }
-
-                @media (width >= 1440px) {
-                    width: 136px;
-                    height: 35.42px;
-                }
+                width: auto;
+                height: auto;
             }
         }
 
-        &:last-child {
-            @media (width >= 768px) {
-                width: 138px;
-                height: 43.95px;
-            }
+        a {
 
-            @media (width >= 1440px) {
-                width: 180px;
-                height: 52px;
-            }
-
-            img {
+            &:first-child {
                 @media (width >= 768px) {
-                    width: 104.4px;
-                    height: auto;
+                    width: 126px;
+                    height: 43.9px;
                 }
 
                 @media (width >= 1440px) {
-                    height: 35.42px;
-                    width: auto;
+                    width: 180px;
+                    height: 52px;
+                }
+
+                img {
+                    @media (width >= 768px) {
+                        width: 92.4px;
+                        height: auto;
+                    }
+
+                    @media (width >= 1440px) {
+                        width: 136px;
+                        height: 35.42px;
+                    }
+                }
+            }
+
+            &:last-child {
+                @media (width >= 768px) {
+                    width: 138px;
+                    height: 43.95px;
+                }
+
+                @media (width >= 1440px) {
+                    width: 180px;
+                    height: 52px;
+                }
+
+                img {
+                    @media (width >= 768px) {
+                        width: 104.4px;
+                        height: auto;
+                    }
+
+                    @media (width >= 1440px) {
+                        height: 35.42px;
+                        width: auto;
+                    }
                 }
             }
         }
     }
-}
 
-} /* ← stänger .hero */
+} 
 
 
 /* Får ha dessa utanför, får inte till det annars */
@@ -277,17 +290,17 @@ body {
         height: 417px;
         margin-left: -63.62px;
     }
-     @media (width >= 1440px) { /*ENDAST TEST palcering av telefon*/
+
+    @media (width >= 1440px) { /* ENDAST TEST placering av telefon */
         margin-top: -250px;
         margin-left:138.71px;
-   
     }
 
     .phone-back,
     .phone-front {
         @media (width >= 768px) {
             filter: drop-shadow(
-                0 4px 4px rgba(0, 0, 0, 0.25)
+                0 4px 4px var(--phone-shadow)
             );
         }
     }
@@ -301,10 +314,11 @@ body {
             height: 485.28px;
             z-index: 1;
         }
-         @media (width >= 1440px) {
-        width: 395.97px;
-        height: 800.65px;
-    }
+
+        @media (width >= 1440px) {
+            width: 395.97px;
+            height: 800.65px;
+        }
     }
 
     .phone-front {
@@ -316,10 +330,10 @@ body {
             height: 493.02px;
             z-index: 2;
         }
-            @media (width >= 1440px) {
-        width: 402.29px;
-        height: 813.42px;
-        
-    }
+
+        @media (width >= 1440px) {
+            width: 402.29px;
+            height: 813.42px;
+        }
     }
 }
