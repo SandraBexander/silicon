@@ -32,21 +32,25 @@
 .dark-mode {
     --page-bg: var(--gray-900);
     --logo-text: var(--white);
-    --darkmode-text:var(--gray-700);
+    --darkmode-text: var(--gray-700);
+
+}
+
 .menu {
+color: #3E4265;
+}
+.dark-mode .menu {
+    color: white;
+}
 
 
-    .menu-light {
-        display: none;
-    }
-    .menu-dark {
-        display: block;
-    }
-}
-}
+
+
 
 body {
     font-family: var(--standard-font);
+    background-color: var(--page-bg);
+    
 }
 
 header {
@@ -180,12 +184,6 @@ header {
             border: none;
             background-color: transparent;
 
-            img {
-                display: block;
-            }
-            .menu-dark {
-                display: none;
-            }
 
             @media (width >= 768px) {
                 margin-left: 46px;
