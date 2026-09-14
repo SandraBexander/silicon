@@ -18,17 +18,18 @@
     --gray-900: #0B0F19;
 
     --brand-primary: #6366F1;
-    --brand-gradient: linear-gradient(
-        90deg,
-        rgba(99, 102, 241, 1) 0%,
-        rgba(139, 92, 246, 1) 50%,
-        rgba(217, 70, 239, 1) 100%
-    );
-
-    --logo-text: #131022;
+    --brand-gradient: linear-gradient(90deg,
+            rgba(99, 102, 241, 1) 0%,
+            rgba(139, 92, 246, 1) 50%,
+            rgba(217, 70, 239, 1) 100%);
+    --hero-bg: radial-gradient circle,
+        rgba(99, 102, 241, 0.10) 0%,
+        rgba(218, 70, 239, 0.05) 42%,
+        rgba(241, 244, 253, 0.07) 83% --logo-text: #131022;
     --white: #ffffff;
     --darkmode-text: #131022;
 }
+
 .dark-mode {
     --page-bg: var(--gray-900);
     --logo-text: var(--white);
@@ -37,8 +38,9 @@
 }
 
 .menu {
-color: #3E4265;
+    color: #3E4265;
 }
+
 .dark-mode .menu {
     color: white;
 }
@@ -49,17 +51,17 @@ color: #3E4265;
 
 body {
     font-family: var(--standard-font);
-    background-color: var(--page-bg);
-    
+
 }
 
 header {
+    background: var(--hero-bg);
 
     .container {
         width: 100%;
         margin: 0 auto;
-        
-        @media (width >= 1440px) {
+
+        @media (width >=1440px) {
             max-width: 1296px;
         }
     }
@@ -73,12 +75,12 @@ header {
         padding-top: 7px;
         height: 52px;
 
-        @media (width >= 768px) {
+        @media (width >=768px) {
             padding-left: 19px;
             padding-right: 19.4px;
         }
 
-        @media (width >= 1440px) {
+        @media (width >=1440px) {
             max-width: 1296px;
             height: 76px;
             margin: auto;
@@ -105,7 +107,7 @@ header {
             letter-spacing: 0;
             color: var(--logo-text);
 
-            @media (width >= 768px) {
+            @media (width >=768px) {
                 font-size: 24.4px;
                 line-height: 34.2px;
             }
@@ -117,7 +119,7 @@ header {
         align-items: center;
         gap: 23.6px;
 
-        @media (width >= 1440px) {
+        @media (width >=1440px) {
             gap: 0;
         }
 
@@ -129,11 +131,11 @@ header {
             line-height: 25.6px;
             color: var(--darkmode-text);
 
-            @media (width >= 768px) {
+            @media (width >=768px) {
                 display: inline;
             }
 
-            @media (width >= 1440px) {
+            @media (width >=1440px) {
                 margin-right: 16px;
                 color: var(--gray-700);
             }
@@ -148,11 +150,11 @@ header {
             input {
                 display: none;
 
-                &:checked + .slider {
+                &:checked+.slider {
                     background-color: var(--brand-primary);
                 }
 
-                &:checked + .slider::before {
+                &:checked+.slider::before {
                     transform: translateX(22px);
                 }
             }
@@ -185,11 +187,11 @@ header {
             background-color: transparent;
 
 
-            @media (width >= 768px) {
+            @media (width >=768px) {
                 margin-left: 46px;
             }
 
-            @media (width >= 1440px) {
+            @media (width >=1440px) {
                 display: none;
             }
         }
@@ -197,7 +199,7 @@ header {
         .sign-in {
             display: none;
 
-            @media (width >= 1440px) {
+            @media (width >=1440px) {
                 display: inline;
                 font-family: var(--standard-font);
                 width: 140px;
