@@ -30,7 +30,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    #faq-header { /* FAQ Header */
+    #faq-header, .faq-left { /* FAQ Header */
         grid-column: 2 / span 10;
         @media (width >= 768px) {
             grid-column: 3/span 8;
@@ -61,7 +61,7 @@ body {
         grid-column: span 12;
         @media (width >= 1440px) {
             grid-column: 6 / span 7;
-            order: 1;
+            /* order: 1; */
         }
 
         .input-quests { /* Hide radio button */
@@ -186,7 +186,6 @@ body {
         @media (width >= 1440px) {
             grid-column: 1/span 4;
         }
-
         p {
             font-size: var(--font-size-l);
             text-align: center;
