@@ -1,0 +1,65 @@
+@import url("variables.css");
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; 
+    font-family: var(--standard-font);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.grid-12 { /* 12 grid system to line up elements */
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: 100dvw;
+    max-width: 67.5%;
+}
+
+
+#app-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #af-top-left, #af-bot-left {
+        grid-column: 2 / span 4;
+    }
+
+    #af-top-right, #af-bot-right {
+        grid-column: 7 / span 4;
+    }
+}
+
+.af-header {
+    text-wrap: balance;
+}
+
+#af-icons {
+    display: flex;
+
+    #af-card, #af-wallet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 60px;
+        background-color: var(--icon-background);
+        border-radius: 8px;
+    }
+}
+
+#af-text {
+    display: flex;
+
+    p {
+        text-wrap: balance;
+    }
+}
+
