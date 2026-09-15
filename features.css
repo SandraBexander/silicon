@@ -8,10 +8,28 @@
 :root {
     font-family: "Manrope", sans-serif;
 
+    --white: #FFFFFF;
     --gray-600: #9397AD;
     --gray-700: #565973;
     --gray-900: #0B0F19;
-    --brand-primary: #6366F1;
+
+    /* Egna CSS variabler */
+    --background-color: var(--white);
+    --heading-color: var(--gray-900);
+    --subtitle-color: var(--gray-600);
+    --body-color: var(--gray-700);
+    --feature-icon-padding-color: rgba(99, 102, 241, 8%);
+}
+
+[data-theme="dark"] {
+    --background-color: var(--gray-900);
+    --heading-color: var(--white);
+    --subtitle-color: rgba(255, 255, 255, 50%);
+    --body-color: rgba(255, 255, 255, 70%);
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 #features {
@@ -86,7 +104,7 @@
                     font-size: 1.75rem; /* 28px */
                     font-weight: 800;
                     line-height: 130%;
-                    color: var(--gray-900);
+                    color: var(--heading-color);
 
                     @media (width >= 768px) {
                         font-size: 2rem; /* 32px */
@@ -100,7 +118,7 @@
                 & p {
                     font-size: 1.125rem; /* 18px */
                     line-height: 160%;
-                    color: var(--gray-600);
+                    color: var(--subtitle-color);
                 }
             }
 
@@ -128,7 +146,7 @@
                     & .featureIcon {
                         display: flex;
                         padding: 1rem;
-                        background-color: rgba(99, 102, 241, 8%);
+                        background-color: var(--feature-icon-padding-color);
                         border-radius: 0.5rem;
                     }
 
@@ -137,13 +155,13 @@
                             font-size: 1.25rem; /* 20px */
                             font-weight: 800;
                             line-height: 140%;
-                            color: var(--gray-900);
+                            color: var(--heading-color);
                         }
 
                         & p {
                             margin-top: 12px;
                             line-height: 160%;
-                            color: var(--gray-700);
+                            color: var(--body-color);
                         }
                     }
                 }
