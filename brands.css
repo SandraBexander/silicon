@@ -3,11 +3,50 @@
     margin: 0;
 }
 
-#brands {
-    margin: 48px 32px;
+:root {
+    --white: #FFFFFF;
+    --gray-300: #E2E5F1;
+    --gray-500: #B4B7C9;
+    --gray-900: #0B0F19;
 
-    @media (width < 768px) {
-        display: none;
+    /* Egna CSS variabler */
+    --background-color: var(--white);
+    --brand-bg-color: var(--white);
+    --brand-border-color: var(--gray-300);
+    --brand-logo-color: var(--gray-500);
+}
+
+[data-theme="dark"] {
+    --background-color: var(--gray-900);
+    --brand-bg-color: transparent;
+    --brand-border-color: rgba(255, 255, 255, 15%);
+    --brand-logo-color: rgba(255, 255, 255, 70%);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+#brands {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (width >= 768px) {
+        display: block;
+        max-width: 720px;
+    }
+
+    @media (width >= 992px) {
+        max-width: 960px;
+    }
+
+    @media (width >= 1200px) {
+        max-width: 1140px;
+    }
+
+    @media (width >= 1400px) {
+        max-width: 1320px;
     }
 
     & .container {
@@ -16,26 +55,28 @@
         justify-content: center;
         gap: 24px;
 
-        & .brand:nth-last-child(-n + 2) {
-            display: none;
-
-            @media (width >= 1440px) {
-                display: flex;
-            }
-        }
-
         & .brand {
-            /* flex: 0 0 auto; */
+            flex: 0 1 196px;
             display: flex;
             align-items: center;
-            width: 196px;
+            justify-content: center;
             height: 100px;
-            /* padding: 8.8px; */
-            border: solid #E2E5F1 1px;
+            border: solid var(--brand-border-color) 1px;
             border-radius: 8px;
+            background-color: var(--brand-bg-color);
+
+            &:nth-last-child(-n + 2) {
+                display: none;
+
+                @media (width >= 1200px) {
+                    display: flex;
+                }
+            }
 
             & .brandLogo {
-                color: #B4B7C9;
+                color: var(--brand-logo-color);
+                width: 80%;
+                height: auto;
             }
         }
     }
