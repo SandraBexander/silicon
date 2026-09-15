@@ -44,7 +44,9 @@
 .dark-mode .menu {
     color: white;
 }
-
+.dark-mode header {
+    background: var(--page-bg);
+}
 
 
 
