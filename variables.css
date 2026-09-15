@@ -87,7 +87,7 @@ body {
 
     .container {
         display: grid;
-        transition: max-width 0.3s ease;
+        transition: max-width 0.5s ease;
 
 
         @media (width >= 768px) {
@@ -198,7 +198,7 @@ body {
 
 
     .hero-content {
-        transition: margin-left 0.3s ease;
+        transition: margin-left 0.5s ease;
 
         @media (width >= 768px) {
             grid-column: 1;
@@ -320,7 +320,7 @@ body {
 
 .phones {
     display: none;
-    transition: margin-left 0.3s ease;
+    transition: margin-left 0.5s ease;
 
     @media (width >= 768px) {
         grid-column: 2;
