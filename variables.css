@@ -53,7 +53,7 @@
 }
 
 
-[dark-theme="dark"] header {
+[dark-theme="dark"] #header {
     background: var(--header-page-bg);
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 
-header {
+#header {
     background: var(--hero-bg);
 
     .container {
