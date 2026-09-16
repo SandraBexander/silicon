@@ -119,32 +119,28 @@ h6 {
     color: var(--header-color);
 }
 
-a {
-    text-decoration: none;
-    color: var(--link-color);
 
-    &:hover {
-        text-decoration: underline;
-    }
-}
 
-.grid-12 { /* 12 grid system to line up elements */
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1.5rem;
-    width: 92.5dvw;
-    max-width: 1296px;
-    /* @media (width >=1440px) {
-        max-width: 67.5%;
-        width: 1296px;
-    } */
-}
+
     
 
 #app-features {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    a {
+        text-decoration: none;
+        color: var(--link-color);
+    }
+
+    .grid-12 { /* 12 grid system to line up elements */
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 1.5rem;
+        width: 92.5dvw;
+        max-width: 1296px;
+    }
 
     #af-top-left, #af-bot-left {
         grid-column: 2 / span 4;
