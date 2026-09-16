@@ -18,43 +18,50 @@
     --gray-900: #0B0F19;
 
     --brand-primary: #6366F1;
+
     --brand-gradient: linear-gradient(90deg,
             rgba(99, 102, 241, 1) 0%,
             rgba(139, 92, 246, 1) 50%,
             rgba(217, 70, 239, 1) 100%);
-    --hero-bg: radial-gradient circle,
-        rgba(99, 102, 241, 0.10) 0%,
-        rgba(218, 70, 239, 0.05) 42%,
-        rgba(241, 244, 253, 0.07) 83% --logo-text: #131022;
-    --white: #ffffff;
-    --darkmode-text: #131022;
+
+    --hero-bg: radial-gradient(circle,
+            rgba(99, 102, 241, 0.10) 0%,
+            rgba(218, 70, 239, 0.05) 42%,
+            rgba(241, 244, 253, 0.07) 83%);
+
+    /* Header-specifika variabler */
+    --header-logo-text: #131022;
+    --header-white: #ffffff;
+    --header-darkmode-text: #131022;
 }
 
-.dark-mode {
-    --page-bg: var(--gray-900);
-    --logo-text: var(--white);
-    --darkmode-text: var(--gray-700);
 
+[dark-theme="dark"] {
+    --header-page-bg: var(--gray-900);
+    --header-logo-text: var(--header-white);
+    --header-darkmode-text: var(--gray-700);
 }
+
 
 .menu {
     color: #3E4265;
 }
 
-.dark-mode .menu {
-    color: white;
-}
-.dark-mode header {
-    background: var(--page-bg);
+
+[dark-theme="dark"] .menu {
+    color: var(--header-white);
 }
 
 
+[dark-theme="dark"] header {
+    background: var(--header-page-bg);
+}
 
 
 body {
     font-family: var(--standard-font);
-
 }
+
 
 header {
     background: var(--hero-bg);
@@ -67,6 +74,7 @@ header {
             max-width: 1296px;
         }
     }
+
 
     .navbar {
         display: flex;
@@ -87,9 +95,9 @@ header {
             height: 76px;
             margin: auto;
 
-            /* Bakgrund läggs till efter merge */
         }
     }
+
 
     .logo-container {
         display: flex;
@@ -107,7 +115,7 @@ header {
             line-height: 33.3px;
             font-size: 20.8px;
             letter-spacing: 0;
-            color: var(--logo-text);
+            color: var(--header-logo-text);
 
             @media (width >=768px) {
                 font-size: 24.4px;
@@ -115,6 +123,7 @@ header {
             }
         }
     }
+
 
     .switch-and-button {
         display: flex;
@@ -125,13 +134,14 @@ header {
             gap: 0;
         }
 
+
         .darkmode-text {
             display: none;
             font-family: var(--standard-font);
             font-size: 16px;
             font-weight: 600;
             line-height: 25.6px;
-            color: var(--darkmode-text);
+            color: var(--header-darkmode-text);
 
             @media (width >=768px) {
                 display: inline;
@@ -142,6 +152,7 @@ header {
                 color: var(--gray-700);
             }
         }
+
 
         .switch {
             cursor: pointer;
@@ -161,6 +172,7 @@ header {
                 }
             }
 
+
             .slider {
                 position: absolute;
                 inset: 0;
@@ -173,7 +185,7 @@ header {
                     width: 18px;
                     height: 18px;
                     border-radius: 50%;
-                    background-color: var(--white);
+                    background-color: var(--header-white);
                     left: 3px;
                     top: 3px;
                     transition: transform 0.3s;
@@ -181,22 +193,27 @@ header {
             }
         }
 
+
         .menu {
             cursor: pointer;
-            width: 30px;
+            width: 36px;
             height: 36px;
             border: none;
             background-color: transparent;
+            margin-left: 36px;
+            margin-right: 8px;
 
-
-            @media (width >=768px) {
-                margin-left: 46px;
+            svg {
+                width: 100%;
+                height: 100%;
+                display: block;
             }
 
             @media (width >=1440px) {
                 display: none;
             }
         }
+
 
         .sign-in {
             display: none;
