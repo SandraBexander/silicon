@@ -9,16 +9,18 @@
     --gray-500: #B4B7C9;
     --gray-900: #0B0F19;
 
-    /* Egna CSS variabler */
+    /* Brands CSS variabler */
     --background-color: var(--white);
     --brand-bg-color: var(--white);
+    --brand-bg-color-hover: var(--white);
     --brand-border-color: var(--gray-300);
     --brand-logo-color: var(--gray-500);
 }
 
 [data-theme="dark"] {
     --background-color: var(--gray-900);
-    --brand-bg-color: transparent;
+    --brand-bg-color: var(--gray-900);
+    --brand-bg-color-hover: rgba(255, 255, 255, 4%);
     --brand-border-color: rgba(255, 255, 255, 15%);
     --brand-logo-color: rgba(255, 255, 255, 70%);
 }
@@ -35,6 +37,8 @@ body {
     @media (width >= 768px) {
         display: block;
         max-width: 720px;
+        margin-top: 48px;
+        margin-bottom: 62px;
     }
 
     @media (width >= 992px) {
@@ -43,6 +47,8 @@ body {
 
     @media (width >= 1200px) {
         max-width: 1140px;
+        margin-top: 96px;
+        margin-bottom: 112px;
     }
 
     @media (width >= 1400px) {
@@ -64,6 +70,13 @@ body {
             border: solid var(--brand-border-color) 1px;
             border-radius: 8px;
             background-color: var(--brand-bg-color);
+            transition: all 0.2s ease-in-out 0s;
+
+            &:hover {
+                background-color: var(--brand-bg-color-hover);
+                box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 6%), 0px 2px 6.4px -1px rgba(19, 16, 34, 3%);
+                margin-top: -4px;
+            }
 
             &:nth-last-child(-n + 2) {
                 display: none;
