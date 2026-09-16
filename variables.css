@@ -48,7 +48,7 @@
     --hero-bg: var(--gray-900);
     --hero-button-bg: var(--gray-200);
 
-    .hero {
+    #hero {
         .store-buttons {
             .store-light {
                 display: none;
@@ -80,7 +80,7 @@ body {
 }
 
 
-.hero {
+#hero {
     background: var(--hero-bg);
     padding-bottom: 145.34px;
 
@@ -311,11 +311,7 @@ body {
             }
         }
     }
-}
-
-
-/* Får ha dessa utanför, får inte till det annars */
-
+    
 .phones {
     display: none;
     transition: margin-left 0.5s ease;
@@ -381,3 +377,6 @@ body {
         }
     }
 }
+}
+
+
