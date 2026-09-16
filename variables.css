@@ -26,11 +26,12 @@
         rgba(217, 70, 239, 1) 100%
     );
 
-    /* Hero */
-    --white: #ffffff;
+
+    /* Hero-specifika variabler */
+    --hero-white: #ffffff;
     --hero-title: #131022;
     --hero-text: #585C7B;
-    --button-bg: #000000;
+    --hero-button-bg: #000000;
 
     --hero-bg: radial-gradient(
         rgba(99, 102, 241, 0.10) 0%,
@@ -38,15 +39,14 @@
         rgba(241, 244, 253, 0.07) 83%
     );
 
-    --phone-shadow: rgba(0, 0, 0, 0.25);
+    --hero-phone-shadow: rgba(0, 0, 0, 0.25);
 }
 
-
-.dark-mode {
-    --hero-title: var(--white);
-    --hero-text: var(--white);
+[dark-theme="dark"] {
+    --hero-title: var(--hero-white);
+    --hero-text: var(--hero-white);
     --hero-bg: var(--gray-900);
-    --button-bg: var(--gray-200);
+    --hero-button-bg: var(--gray-200);
 
     .hero {
         .store-buttons {
@@ -63,7 +63,7 @@
 
 
 @media (width >= 768px) and (width < 1440px) {
-    .dark-mode {
+    [dark-theme="dark"] {
         --hero-text: #585C7B;
     }
 }
@@ -234,7 +234,7 @@ body {
             height: 50.41px;
             margin: 0 auto;
 
-            background-color: var(--button-bg);
+            background-color: var(--hero-button-bg);
             border-radius: 6px;
 
             display: flex;
@@ -311,7 +311,6 @@ body {
             }
         }
     }
-
 }
 
 
@@ -341,7 +340,7 @@ body {
 
         @media (width >= 768px) {
             filter: drop-shadow(
-                0 4px 4px var(--phone-shadow)
+                0 4px 4px var(--hero-phone-shadow)
             );
         }
     }
