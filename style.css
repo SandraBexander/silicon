@@ -1,17 +1,130 @@
-@import url("variables.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
+:root {
+    --font-color: var(--gray-700);
+    --header-color: var(--gray-900);
+    --link-color: var(--brand-primary);
+    --link-color-alt: #22C55E;
+
+    --nav-text-color: var(--gray-800);
+    --nav-text-color-hover: var(--brand-primary);
+    --border-color: var(--gray-300);
+    --button-color: var(--gray-100);
+    --button-color-toggle: var(--brand-primary);
+    --button-color-hover: var(--brand-primary-overlay);
+
+    --background-color: white;
+    --background-color-accordion: white;
+    --card-hover-shadow: rgba(19, 16, 34, 0.06);
+    --accordion-arrow-color: #3E4265;
+    --background-color-testimonials: var(--gray-100);
+
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.75rem;
+    --font-size-h4: 1.5rem;
+    --font-size-h5: 1.25rem;
+    --font-size-h6: 1rem;
+    --font-weight-header: 800;
+
+    --font-size-lead: 1.5rem;
+    --font-size-xl: 1.25rem;
+    --font-size-l: 1.125rem;
+    --font-size-m: 1rem;
+    --font-size-s: 0.875rem;
+    --font-size-xs: 0.75rem;
+
+    --gray-100: #F3F6FF;
+    --gray-200: #EFF2FC;
+    --gray-300: #E2E5F1;
+    --gray-400: #D4D7E5;
+    --gray-500: #B4B7C9;
+    --gray-600: #9397AD;
+    --gray-700: #565973;
+    --gray-800: #33354D;
+    --gray-900: #0B0F19;
+    --brand-primary: #6366F1;
+    --brand-primary-overlay: rgb(113, 115, 241);
+    --brand-gradient: linear-gradient(90deg,rgba(99, 102, 241, 1) 0%, rgba(139, 92, 246, 1) 50%, rgba(217, 70, 239, 1) 100%);
+}
+
+[data-theme="dark"] {
+    --background-color: var(--gray-900);
+    --background-color-accordion: #131022;
+    --accordion-arrow-color: var(--gray-400);
+    --background-color-testimonials: rgba(255, 255, 255, 0.04);
+    --card-hover-shadow: rgba(122, 109, 183, 0.06);
+
+    --border-color: rgba(255, 255, 255, 0.15);
+    --button-color: rgba(255, 255, 255, 0.05);
+
+    --header-color: var(--gray-400);
+    --font-color: rgba(255, 255, 255, 0.7);
+}
+
 html {
-    font-size: 16px; 
-    font-family: var(--standard-font);
+    font-size: 16px;
+    font-family: "Manrope", sans-serif;
 }
 
 body {
     background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-header);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+p {
+    line-height: 1.5;
+    color: var(--font-color);
+    font-weight: 200;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    color: var(--header-color);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    color: var(--header-color);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    color: var(--header-color);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+    color: var(--header-color);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+    color: var(--header-color);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+    color: var(--header-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .grid-12 { /* 12 grid system to line up elements */
@@ -23,7 +136,6 @@ body {
     @media (width >=1440px) {
         max-width: 67.5%;
     }
-    
 }
 
 #faq {
@@ -261,6 +373,4 @@ body {
             grid-column: 3/span 2;
         }
     }
-
-
 }
