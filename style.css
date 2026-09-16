@@ -118,7 +118,8 @@ h6 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1.5rem;
-    max-width: 67.5%;
+    width: 92.5%;
+    max-width: 1296px;
 }
 
 .testimonials {
