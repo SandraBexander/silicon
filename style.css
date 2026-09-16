@@ -132,12 +132,12 @@ a {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1.5rem;
-    width: 100dvw;
-    max-width: 92.5%;
-    @media (width >=1440px) {
+    width: 92.5%;
+    max-width: 1296px;
+    /* @media (width >=1440px) {
         max-width: 67.5%;
-        /* width: 1296px; */
-    }
+        width: 1296px;
+    } */
 }
     
 
@@ -157,7 +157,7 @@ a {
     }
 
     #af-top-right, #af-bot-right {
-        grid-column: 7 / span 4;
+        grid-column: 8 / span 4;
     }
 
     @media (width < 1440px) {
