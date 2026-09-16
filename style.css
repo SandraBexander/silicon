@@ -133,9 +133,12 @@ a {
     gap: 1.5rem;
     width: 92.5dvw;
     max-width: 1296px;
-    /* @media (width >=1440px) {
-        max-width: 67.5%;
-    } */
+    @media (width >=1400px) {
+        grid-template-columns: 2fr 2fr 1fr 7fr;
+        grid-template-areas:    'faq-hd faq-hd ... faq-ac'
+                                'faq-ct faq-ct ... faq-ac'
+                                'faq-cp faq-cc ... faq-ac';
+    }
 }
 
 #faq {
@@ -147,8 +150,9 @@ a {
         @media (width >= 768px) {
             grid-column: 3/span 8;
         }
-        @media (width >= 1440px) {
+        @media (width >= 1400px) {
             grid-column: 1 / span 4;
+            grid-area: faq-hd;
         }
 
         h4 {
@@ -160,7 +164,7 @@ a {
                 text-wrap: balance;
             }
 
-            @media (width >= 1440px) {
+            @media (width >= 1400px) {
                 text-align: left;
                 padding: 0;
             }
@@ -171,8 +175,9 @@ a {
     /* CSS accordion logic */
     #faq-accordion { /* Accordion label */
         grid-column: span 12;
-        @media (width >= 1440px) {
+        @media (width >= 1400px) {
             grid-column: 6 / span 7;
+            grid-area: faq-ac;
             /* order: 1; */
         }
 
@@ -295,8 +300,9 @@ a {
         @media (width >= 768px) {
             grid-column: 3/span 8;
         }
-        @media (width >= 1440px) {
+        @media (width >= 1400px) {
             grid-column: 1/span 4;
+            grid-area: faq-ct;
         }
         p {
             font-size: var(--font-size-l);
@@ -307,7 +313,7 @@ a {
                 padding: 0 40px;
             }
 
-            @media (width >= 1440px) {
+            @media (width >= 1400px) {
                 text-align: left;
                 padding: 0;
             }
@@ -347,7 +353,7 @@ a {
         transition: all 0.25s;
         &:hover {
             text-decoration: none;
-            @media (width >= 1440px) {
+            @media (width >= 1400px) {
                 box-shadow: 6px 6px 8px 2px var(--card-hover-shadow);
                 transform: scale(1.02);
                 transition: all 0.25s;
@@ -362,15 +368,17 @@ a {
     }
 
     #contact-phone {
-        @media (width >= 1440px) {
+        @media (width >= 1400px) {
             grid-column: 1/span 2;
+            grid-area: faq-cp;
         }
     }
 
     #contact-chat {
         color: var(--link-color-alt);
-        @media (width >= 1440px) {
+        @media (width >= 1400px) {
             grid-column: 3/span 2;
+            grid-area: faq-cc;
         }
     }
 }
