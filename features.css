@@ -3,51 +3,36 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
 :root {
-    /* Common Design variables*/
     font-family: "Manrope", sans-serif;
+
     --white: #FFFFFF;
-    --gray-100: #F3F6FF;
-    --gray-200: #EFF2FC;
-    --gray-300: #E2E5F1;
-    --gray-400: #D4D7E5;
-    --gray-500: #B4B7C9;
     --gray-600: #9397AD;
     --gray-700: #565973;
-    --gray-800: #33354D;
     --gray-900: #0B0F19;
-    --brand-primary: #6366F1;
-    --brand-gradient: linear-gradient(90deg,rgba(99, 102, 241, 1) 0%, rgba(139, 92, 246, 1) 50%, rgba(217, 70, 239, 1) 100%);
-    --system-error: #EF4444;
-    --system-success: #22C55E;
-    --system-warning: #FFBA08;
-    --system-info: #4C82F7;
 
-    /* Features CSS variabler */
-    --features-background-color: var(--white);
-    --features-heading-color: var(--gray-900);
-    --features-subtitle-color: var(--gray-600);
-    --features-body-color: var(--gray-700);
-    --features-feature-icon-padding-color: rgba(99, 102, 241, 8%);
+    /* Egna CSS variabler */
+    --background-color: var(--white);
+    --heading-color: var(--gray-900);
+    --subtitle-color: var(--gray-600);
+    --body-color: var(--gray-700);
+    --feature-icon-padding-color: rgba(99, 102, 241, 8%);
 }
 
 [data-theme="dark"] {
-    --features-background-color: var(--gray-900);
-    --features-heading-color: var(--white);
-    --features-subtitle-color: rgba(255, 255, 255, 50%);
-    --features-body-color: rgba(255, 255, 255, 70%);
+    --background-color: var(--gray-900);
+    --heading-color: var(--white);
+    --subtitle-color: rgba(255, 255, 255, 50%);
+    --body-color: rgba(255, 255, 255, 70%);
 }
 
 body {
-
+    background-color: var(--background-color);
 }
 
 #features {
-    background-color: var(--features-background-color);
-
     & .container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -119,7 +104,7 @@ body {
                     font-size: 1.75rem; /* 28px */
                     font-weight: 800;
                     line-height: 130%;
-                    color: var(--features-heading-color);
+                    color: var(--heading-color);
 
                     @media (width >= 768px) {
                         font-size: 2rem; /* 32px */
@@ -133,7 +118,7 @@ body {
                 & p {
                     font-size: 1.125rem; /* 18px */
                     line-height: 160%;
-                    color: var(--features-subtitle-color);
+                    color: var(--subtitle-color);
                 }
             }
 
@@ -161,7 +146,7 @@ body {
                     & .featureIcon {
                         display: flex;
                         padding: 1rem;
-                        background-color: var(--features-feature-icon-padding-color);
+                        background-color: var(--feature-icon-padding-color);
                         border-radius: 0.5rem;
                     }
 
@@ -170,13 +155,13 @@ body {
                             font-size: 1.25rem; /* 20px */
                             font-weight: 800;
                             line-height: 140%;
-                            color: var(--features-heading-color);
+                            color: var(--heading-color);
                         }
 
                         & p {
                             margin-top: 12px;
                             line-height: 160%;
-                            color: var(--features-body-color);
+                            color: var(--body-color);
                         }
                     }
                 }
