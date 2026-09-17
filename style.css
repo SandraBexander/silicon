@@ -56,10 +56,12 @@
     --button-color: var(--gray-100);
     --button-color-toggle: var(--brand-primary);
     --button-color-hover: var(--brand-primary-overlay);
+    --icon-background: rgba(99, 101, 241, 0.08);
 
     --background-color: white;
     --background-color-accordion-mobile: white;
     --background-color-accordion: white;
+    --background-color-reviewer-card: white;
     --accordion-arrow-color: #3E4265;
     --background-color-testimonials: var(--gray-100);
 
@@ -99,6 +101,7 @@
     --background-color: var(--gray-900);
     --background-color-accordion-mobile: #131022;
     --background-color-accordion: rgba(255, 255, 255, 0.04);
+    --background-color-reviewer-card: rgba(255, 255, 255, 0.04);
     --accordion-arrow-color: var(--gray-400);
     --background-color-testimonials: rgba(255, 255, 255, 0.04);
 
@@ -423,6 +426,115 @@ body {
 }
 
 
+#app-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: var(--link-color);
+    }
+
+    h2 {
+        font-size: var(--font-size-h4);
+        color: var(--header-color);
+        font-weight: var(--font-weight-header);
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+    }
+
+    p {
+        line-height: 1.5;
+        color: var(--font-color);
+        font-weight: 200;
+    }
+
+    .grid-12 { /* 12 grid system to line up elements */
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 1.5rem;
+        width: 92.5dvw;
+        max-width: 1296px;
+    }
+
+    #af-top-left, #af-bot-left {
+        grid-column: 2 / span 4;
+    }
+
+    #af-top-left, #af-bot-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #af-top-right, #af-bot-right {
+        grid-column: 8 / span 4;
+    }
+
+    @media (width < 1400px) {
+        display: none;
+    }
+
+    .af-top {
+        display: flex;
+        justify-content: center;
+    }
+
+    .af-bot {
+        margin-top: 10rem;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-position: inside;
+        list-style-type: none;
+        color: var(--font-color);
+        i {
+            color: var(--brand-primary);
+            margin-right: .5rem;
+        }
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .af-header {
+        text-wrap: balance;
+    }
+    
+    #af-icons {
+        #af-card, #af-wallet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 60px;
+            background-color: var(--icon-background);
+            border-radius: 8px;
+        }
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .af-learn-more {
+        max-width: 140px;
+        text-align: center;
+        background-color: var(--brand-primary);
+        color: white;
+        font-size: var(--font-size-s);
+        padding: 0.75rem 0;
+        border-radius: 8px;
+    }
+}
+
+
 #testimonials {
     background-color: var(--background-color-testimonials);
     display: flex;
@@ -462,7 +574,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        background-color: white;
+        background-color: var(--background-color-reviewer-card);
         border-radius: 8px;
         box-shadow: 0 4px 8px 2px rgba(19, 16, 34, 0.06);
         margin-top: 20px;
