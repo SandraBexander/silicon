@@ -10,7 +10,34 @@
 </head>
 
 <body data-theme="">
-    <header></header>
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <img src="./assets/icons/logo.svg" alt="Logo" class="logo"> <span> Silicon </span>
+                </div>
+
+                <div class="switch-and-button">
+                    <span class="darkmode-text">Dark Mode</span>
+
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <button class="menu" aria-label="Öppna meny">
+                         <svg aria-hidden="true">
+                            <use href="./assets/icons/hamburger-menu.svg"> </use>
+                        </svg>
+                    </button>
+
+                    <a class="sign-in" href="#">
+                        <img src="./assets/icons/btn.svg" alt="Sign In">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section id="features">

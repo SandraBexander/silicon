@@ -26,6 +26,16 @@
     --system-warning: #FFBA08;
     --system-info: #4C82F7;
 
+    /* Variabel för light/dark body bakgrund */
+    --body-background-color: var(--white);
+
+    /* Header variabler */
+    --header-logo-text: #131022;
+    --header-white: #ffffff;
+    --header-darkmode-text: #131022;
+
+    --header-menu-btn-color: #3E4265;
+
     /* Features CSS variabler */
     --features-background-color: var(--white);
     --features-heading-color: var(--gray-900);
@@ -72,6 +82,14 @@
 }
 
 [data-theme="dark"] {
+    --body-background-color: var(--gray-900);
+
+    /* Header variabler */
+    --header-logo-text: var(--white);
+    --header-darkmode-text: var(--gray-700);
+    --header-menu-btn-color: var(--white);
+
+    /* Features variabler */
     --features-background-color: var(--gray-900);
     --features-heading-color: var(--white);
     --features-subtitle-color: rgba(255, 255, 255, 50%);
@@ -89,6 +107,178 @@
 
     --header-color: var(--gray-400);
     --font-color: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    background-color: var(--body-background-color);
+}
+
+#header {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+
+        @media (width >=1440px) {
+            max-width: 1296px;
+        }
+    }
+
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 16.4px;
+        padding-right: 16.4px;
+        padding-top: 7px;
+        height: 52px;
+
+        @media (width >=768px) {
+            padding-left: 19px;
+            padding-right: 19.4px;
+        }
+
+        @media (width >=1440px) {
+            max-width: 1296px;
+            height: 76px;
+            margin: auto;
+
+        }
+    }
+
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        .logo {
+            width: 47px;
+            height: 44px;
+        }
+
+        span {
+            font-family: var(--standard-font);
+            font-weight: 800;
+            line-height: 33.3px;
+            font-size: 20.8px;
+            letter-spacing: 0;
+            color: var(--header-logo-text);
+
+            @media (width >=768px) {
+                font-size: 24.4px;
+                line-height: 34.2px;
+            }
+        }
+    }
+
+
+    .switch-and-button {
+        display: flex;
+        align-items: center;
+        gap: 23.6px;
+
+        @media (width >=1440px) {
+            gap: 0;
+        }
+
+
+        .darkmode-text {
+            display: none;
+            font-family: var(--standard-font);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 25.6px;
+            color: var(--header-darkmode-text);
+
+            @media (width >=768px) {
+                display: inline;
+            }
+
+            @media (width >=1440px) {
+                margin-right: 16px;
+                color: var(--gray-700);
+            }
+        }
+
+
+        .switch {
+            cursor: pointer;
+            width: 46px;
+            height: 24px;
+            position: relative;
+
+            input {
+                display: none;
+
+                &:checked+.slider {
+                    background-color: var(--brand-primary);
+                }
+
+                &:checked+.slider::before {
+                    transform: translateX(22px);
+                }
+            }
+
+
+            .slider {
+                position: absolute;
+                inset: 0;
+                border-radius: 12px;
+                background-color: var(--gray-600);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    background-color: var(--header-white);
+                    left: 3px;
+                    top: 3px;
+                    transition: transform 0.3s;
+                }
+            }
+        }
+
+
+        .menu {
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            border: none;
+            background-color: transparent;
+            color: var(--header-menu-btn-color);
+
+            @media (width >= 768px) {
+                margin-left: 36px;
+                margin-right: 8px;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            @media (width >=1440px) {
+                display: none;
+            }
+        }
+
+
+        .sign-in {
+            display: none;
+
+            @media (width >=1440px) {
+                display: inline;
+                font-family: var(--standard-font);
+                width: 140px;
+                height: 36px;
+                margin-left: 32px;
+            }
+        }
+    }
 }
 
 
