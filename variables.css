@@ -64,7 +64,7 @@ body {
 
 
 #header {
-    background: var(--hero-bg);
+    background: var(--header-white);
 
     .container {
         width: 100%;
@@ -200,8 +200,11 @@ body {
             height: 36px;
             border: none;
             background-color: transparent;
-            margin-left: 36px;
-            margin-right: 8px;
+
+            @media (width >= 768px) {
+                margin-left: 36px;
+                margin-right: 8px;
+            }
 
             svg {
                 width: 100%;
