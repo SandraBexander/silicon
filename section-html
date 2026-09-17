@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="features" class="subscribe features">
+      <div class="subscribe-copy">
+        <div class="bell">
+          <img src="image/bell.svg" alt="bell icon">
+        </div>
+        <strong>Subscribe to our newsletter to stay informed about latest updates</strong>
+      </div>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <p class="copyright">© 2025 Silicon. All rights reserved.</p>
+
+  </div>
+</body>
+</html>
