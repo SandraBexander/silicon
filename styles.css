@@ -624,7 +624,6 @@ body {
   width: 636px;
   height: 52px;
   margin: 11px auto 0;
-  overflow: hidden;
 }
 
 .how-it-works h2 {
@@ -635,8 +634,11 @@ body {
 }
 
 .how-it-works p {
-  margin: 0;
+  width: 520px;
+  max-width: 100%;
+  margin: 0 auto;
   font-size: 10px;
+  line-height: 16px;
   color: #777384;
 }
 
