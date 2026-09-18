@@ -39,11 +39,17 @@
     --hero-title: #131022;
     --hero-text: #585C7B;
     --hero-button-bg: #000000;
-    --hero-bg: radial-gradient(ellipse at top bottom,
+    /* --hero-bg: radial-gradient(ellipse at top bottom,
             rgba(99, 102, 241, 0.10) 0%,
             rgba(218, 70, 239, 0.05) 42%,
             rgba(241, 244, 253, 0.07) 83%,
-            transparent 100%);
+            transparent 100%); */
+    --hero-bg: radial-gradient(
+        ellipse at 60% 120%,    
+        rgba(99, 102, 241, 0.10) 0%,
+        rgba(218, 70, 239, 0.05) 42%,
+        rgba(241, 244, 253, 0.07) 83%
+     );
     --hero-phone-shadow: rgba(0, 0, 0, 0.25);
 
     /* Brands variabler */
@@ -110,10 +116,10 @@
     /* Hero variabler */
     --hero-title: var(--white);
     --hero-text: var(--white);
-    --hero-bg: radial-gradient(ellipse at top bottom,
-            rgba(99, 102, 241, 0.10) 0%,
-            rgba(218, 70, 239, 0.05) 42%,
-            rgba(241, 244, 253, 0.07) 83%,
+    --hero-bg: radial-gradient(ellipse at 60% 120%,
+            rgba(99, 102, 241, 10%) 0%,
+            rgba(218, 70, 239, 5%) 42%,
+            rgba(241, 244, 253, 0%) 83%,
             transparent 100%) var(--gray-900);
     --hero-button-bg: var(--gray-200);
 
@@ -321,7 +327,7 @@ body {
 #hero {
     font-family: "Manrope", sans-serif;
     background: var(--hero-bg);
-    padding-bottom: 145.34px;
+    padding-bottom: 108px;
 
     .container {
         display: grid;
@@ -714,6 +720,8 @@ body {
         padding: 0 12px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 36px;
+        margin-bottom: 44px;
 
         @media (width >=576px) {
             max-width: 540px;
@@ -723,6 +731,7 @@ body {
 
         @media (width >=768px) {
             max-width: 720px;
+            margin-bottom: 100px;
         }
 
         @media (width >=992px) {
@@ -853,6 +862,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 136px;
+    margin-bottom: 138px;
 
     a {
         text-decoration: none;
@@ -1098,6 +1109,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 43px;
+    margin-bottom: 42px;
     #faq-header, .faq-left { /* FAQ Header */
         grid-column: 2 / span 10;
         @media (width >= 768px) {
