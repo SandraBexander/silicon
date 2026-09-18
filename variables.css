@@ -33,7 +33,7 @@
     --hero-button-bg: #000000;
 
     --hero-bg: radial-gradient(
-    ellipse at top center,    
+    ellipse at 50% 80%,    
      rgba(99, 102, 241, 0.10) 0%,
      rgba(218, 70, 239, 0.05) 42%,
      rgba(241, 244, 253, 0.07) 83%,
