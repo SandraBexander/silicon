@@ -49,33 +49,31 @@
         align-items: flex-start;
         justify-content: center;
         gap: 66px;
-        height: 663px;
 
         @media (width >= 481px) and (width <= 900px) {
             gap: 20px;
-            height: auto;
         }
 
         @media (width <= 480px) {
             gap: 12px;
-            height: auto;
         }
     }
 
     .phone-row img {
         display: block;
-        width: 328px;
-        height: 663px;
+        flex: 0 1 328px;
+        min-width: 0;
+        width: 100%;
+        max-width: 328px;
+        height: auto;
         object-fit: contain;
 
-        @media (width >= 481px) and (width <= 900px) {
-            width: calc((100vw - 88px) / 3);
-            height: auto;
-        }
-
         @media (width <= 480px) {
-            width: calc((100vw - 48px) / 3);
-            height: auto;
+            max-width: 280px;
+
+            &:not(:last-child) {
+                display: none;
+            }
         }
     }
 
@@ -124,6 +122,30 @@
 
         [dark-theme="dark"] & {
             color: var(--gray-500);
+        }
+    }
+
+    /* Rubriktext som byter innehåll per skärmstorlek */
+    .only-tablet,
+    .only-mobile {
+        display: none;
+    }
+
+    @media (width >= 481px) and (width <= 900px) {
+        .only-desktop {
+            display: none;
+        }
+        .only-tablet {
+            display: inline;
+        }
+    }
+
+    @media (width <= 480px) {
+        .only-desktop {
+            display: none;
+        }
+        .only-mobile {
+            display: inline;
         }
     }
 
