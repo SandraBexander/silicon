@@ -44,10 +44,15 @@
             rgba(218, 70, 239, 0.05) 42%,
             rgba(241, 244, 253, 0.07) 83%,
             transparent 100%);
-
     --hero-phone-shadow: rgba(0, 0, 0, 0.25);
 
-    /* Features CSS variabler */
+    /* Brands variabler */
+    --brand-bg-color: var(--white);
+    --brand-bg-color-hover: var(--white);
+    --brand-border-color: var(--gray-300);
+    --brand-logo-color: var(--gray-500);
+
+    /* Features variabler */
     --features-background-color: var(--white);
     --features-heading-color: var(--gray-900);
     --features-subtitle-color: var(--gray-600);
@@ -111,6 +116,12 @@
             rgba(241, 244, 253, 0.07) 83%,
             transparent 100%) var(--gray-900);
     --hero-button-bg: var(--gray-200);
+
+    /* Brands variabler */
+    --brand-bg-color: var(--gray-900);
+    --brand-bg-color-hover: rgba(255, 255, 255, 4%);
+    --brand-border-color: rgba(255, 255, 255, 15%);
+    --brand-logo-color: rgba(255, 255, 255, 70%);
 
     /* Features variabler */
     --features-background-color: var(--gray-900);
@@ -619,6 +630,73 @@ body {
             @media (width >=1440px) {
                 width: 402.29px;
                 height: 813.42px;
+            }
+        }
+    }
+}
+
+
+#brands {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (width >= 768px) {
+        display: block;
+        max-width: 720px;
+        margin-top: 48px;
+        margin-bottom: 62px;
+    }
+
+    @media (width >= 992px) {
+        max-width: 960px;
+    }
+
+    @media (width >= 1200px) {
+        max-width: 1140px;
+        margin-top: 96px;
+        margin-bottom: 112px;
+    }
+
+    @media (width >= 1400px) {
+        max-width: 1320px;
+    }
+
+    & .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+
+        & .brand {
+            flex: 0 1 196px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            border: solid var(--brand-border-color) 1px;
+            border-radius: 8px;
+            background-color: var(--brand-bg-color);
+            transition: all 0.2s ease-in-out 0s;
+
+            &:hover {
+                background-color: var(--brand-bg-color-hover);
+                box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 6%), 0px 2px 6.4px -1px rgba(19, 16, 34, 3%);
+                margin-top: -4px;
+            }
+
+            &:nth-last-child(-n + 2) {
+                display: none;
+
+                @media (width >= 1200px) {
+                    display: flex;
+                }
+            }
+
+            & .brandLogo {
+                color: var(--brand-logo-color);
+                width: 80%;
+                height: auto;
             }
         }
     }
