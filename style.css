@@ -20,7 +20,7 @@
     --gray-800: #33354D;
     --gray-900: #0B0F19;
     --brand-primary: #6366F1;
-    --brand-gradient: linear-gradient(90deg,rgba(99, 102, 241, 1) 0%, rgba(139, 92, 246, 1) 50%, rgba(217, 70, 239, 1) 100%);
+    --brand-gradient: linear-gradient(90deg, rgba(99, 102, 241, 1) 0%, rgba(139, 92, 246, 1) 50%, rgba(217, 70, 239, 1) 100%);
     --system-error: #EF4444;
     --system-success: #22C55E;
     --system-warning: #FFBA08;
@@ -39,10 +39,11 @@
     --hero-title: #131022;
     --hero-text: #585C7B;
     --hero-button-bg: #000000;
-
-    --hero-bg: radial-gradient(rgba(99, 102, 241, 0.10) 0%,
+    --hero-bg: radial-gradient(ellipse at top bottom,
+            rgba(99, 102, 241, 0.10) 0%,
             rgba(218, 70, 239, 0.05) 42%,
-            rgba(241, 244, 253, 0.07) 83%);
+            rgba(241, 244, 253, 0.07) 83%,
+            transparent 100%);
 
     --hero-phone-shadow: rgba(0, 0, 0, 0.25);
 
@@ -104,21 +105,12 @@
     /* Hero variabler */
     --hero-title: var(--white);
     --hero-text: var(--white);
-    --hero-bg: var(--gray-900);
+    --hero-bg: radial-gradient(ellipse at top bottom,
+            rgba(99, 102, 241, 0.10) 0%,
+            rgba(218, 70, 239, 0.05) 42%,
+            rgba(241, 244, 253, 0.07) 83%,
+            transparent 100%) var(--gray-900);
     --hero-button-bg: var(--gray-200);
-
-    #hero {
-        .store-buttons {
-            .store-light {
-                display: none;
-            }
-
-            .store-dark {
-                display: block;
-            }
-        }
-    }
-
 
     /* Features variabler */
     --features-background-color: var(--gray-900);
@@ -141,11 +133,6 @@
     --font-color: rgba(255, 255, 255, 0.7);
 }
 
-@media (width >=768px) and (width < 1440px) {
-    [data-theme="dark"] {
-        --hero-text: #585C7B;
-    }
-}
 
 body {
     background-color: var(--body-background-color);
@@ -288,7 +275,7 @@ body {
             background-color: transparent;
             color: var(--header-menu-btn-color);
 
-            @media (width >= 768px) {
+            @media (width >=768px) {
                 margin-left: 36px;
                 margin-right: 8px;
             }
@@ -394,6 +381,12 @@ body {
         margin-top: 18.22px;
         text-align: center;
 
+        @media (width >=768px) and (width < 1440px) {
+            [data-theme="dark"] & {
+                color: #585C7B;
+            }
+        }
+
         @media (width >=768px) {
             font-family: var(--standard-font);
             font-size: 18px;
@@ -470,6 +463,17 @@ body {
         .store-dark {
             display: none;
         }
+
+        [data-theme="dark"] & {
+            .store-light {
+                display: none;
+            }
+
+            .store-dark {
+                display: block;
+            }
+        }
+
 
         a {
             width: 100%;
@@ -633,25 +637,25 @@ body {
         margin-left: auto;
         margin-right: auto;
 
-        @media (width >= 576px) {
+        @media (width >=576px) {
             max-width: 540px;
             text-wrap-style: pretty;
             padding: 0;
         }
 
-        @media (width >= 768px) {
+        @media (width >=768px) {
             max-width: 720px;
         }
 
-        @media (width >= 992px) {
+        @media (width >=992px) {
             max-width: 960px;
         }
 
-        @media (width >= 1200px) {
+        @media (width >=1200px) {
             max-width: 1140px;
         }
 
-        @media (width >= 1400px) {
+        @media (width >=1400px) {
             max-width: 1320px;
         }
 
@@ -659,7 +663,7 @@ body {
             display: none;
             grid-column: 1 / span 4;
 
-            @media (width >= 1400px) {
+            @media (width >=1400px) {
                 display: block;
             }
         }
@@ -670,44 +674,48 @@ body {
             gap: 32px;
             grid-column: span 12;
 
-            @media (width >= 768px) {
+            @media (width >=768px) {
                 gap: 40px;
             }
-            
-            @media (width >= 1400px) {
+
+            @media (width >=1400px) {
                 grid-column: 6 / span 7;
                 gap: 67px;
             }
-            
+
             & .header {
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
                 text-align: center;
 
-                @media (width >= 1400px) {
+                @media (width >=1400px) {
                     grid-column: 6 / span 7;
                     text-align: left;
                     gap: 13px;
                 }
 
                 & h2 {
-                    font-size: 1.75rem; /* 28px */
+                    font-size: 1.75rem;
+                    /* 28px */
                     font-weight: 800;
                     line-height: 130%;
                     color: var(--features-heading-color);
 
-                    @media (width >= 768px) {
-                        font-size: 2rem; /* 32px */
+                    @media (width >=768px) {
+                        font-size: 2rem;
+                        /* 32px */
                     }
 
-                    @media (width >= 1200px) {
-                        font-size: 2.5rem; /* 40px */
+                    @media (width >=1200px) {
+                        font-size: 2.5rem;
+                        /* 40px */
                     }
                 }
 
                 & p {
-                    font-size: 1.125rem; /* 18px */
+                    font-size: 1.125rem;
+                    /* 18px */
                     line-height: 160%;
                     color: var(--features-subtitle-color);
                 }
@@ -717,23 +725,23 @@ body {
                 display: grid;
                 row-gap: 32px;
                 justify-content: center;
-    
-                @media (width >= 768px) {
+
+                @media (width >=768px) {
                     grid-template-columns: repeat(2, 1fr);
                     column-gap: 24px;
                 }
 
-                @media (width >= 1400px) {
+                @media (width >=1400px) {
                     grid-column: 6 / span 7;
                     column-gap: 56px;
                     row-gap: 48px;
                 }
-    
+
                 & .feature {
                     display: flex;
                     gap: 1.5rem;
                     align-items: start;
-    
+
                     & .featureIcon {
                         display: flex;
                         padding: 1rem;
@@ -743,7 +751,8 @@ body {
 
                     & .featureText {
                         & h3 {
-                            font-size: 1.25rem; /* 20px */
+                            font-size: 1.25rem;
+                            /* 20px */
                             font-weight: 800;
                             line-height: 140%;
                             color: var(--features-heading-color);
@@ -787,7 +796,8 @@ body {
         font-weight: 200;
     }
 
-    .grid-12 { /* 12 grid system to line up elements */
+    .grid-12 {
+        /* 12 grid system to line up elements */
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));
         gap: 1.5rem;
@@ -795,17 +805,20 @@ body {
         max-width: 1296px;
     }
 
-    #af-top-left, #af-bot-left {
+    #af-top-left,
+    #af-bot-left {
         grid-column: 2 / span 4;
     }
 
-    #af-top-left, #af-bot-right {
+    #af-top-left,
+    #af-bot-right {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
     }
 
-    #af-top-right, #af-bot-right {
+    #af-top-right,
+    #af-bot-right {
         grid-column: 8 / span 4;
     }
 
@@ -828,10 +841,12 @@ body {
         list-style-position: inside;
         list-style-type: none;
         color: var(--font-color);
+
         i {
             color: var(--brand-primary);
             margin-right: .5rem;
         }
+
         li {
             margin-bottom: 1rem;
         }
@@ -840,9 +855,11 @@ body {
     .af-header {
         text-wrap: balance;
     }
-    
+
     #af-icons {
-        #af-card, #af-wallet {
+
+        #af-card,
+        #af-wallet {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -880,11 +897,11 @@ body {
     max-height: 542px;
 
     .grid-12 {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1.5rem;
-    width: 92.5dvw;
-    max-width: 1296px;
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 1.5rem;
+        width: 92.5dvw;
+        max-width: 1296px;
     }
 
     h1 {
@@ -901,9 +918,9 @@ body {
         margin: 0;
         text-align: justify;
 
-        @media (width >= 2560px) {
-                font-size: var(--font-size-lead);
-            }
+        @media (width >=2560px) {
+            font-size: var(--font-size-lead);
+        }
     }
 
     .reviews {
@@ -946,23 +963,28 @@ body {
         gap: 20px;
         justify-content: start;
         align-items: center;
+
         h6 {
             margin: 0;
             font-size: var(--font-size-h6);
             font-weight: var(--font-weight-header);
             color: var(--header-color);
-            @media (width >= 2560px) {
+
+            @media (width >=2560px) {
                 font-size: var(--font-size-h5);
             }
         }
+
         p {
             font-size: var(--font-size-s);
             color: var(--gray-600);
             margin: 0;
-            @media (width >= 2560px) {
+
+            @media (width >=2560px) {
                 font-size: var(--font-size-xl);
             }
         }
+
         margin-bottom: 10px;
     }
 
