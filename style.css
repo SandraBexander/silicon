@@ -137,7 +137,8 @@ a {
         grid-template-columns: 2fr 2fr 1fr 7fr;
         grid-template-areas:    'faq-hd faq-hd ... faq-ac'
                                 'faq-ct faq-ct ... faq-ac'
-                                'faq-cp faq-cc ... faq-ac';
+                                'faq-cp faq-cc ... faq-ac'
+                                '... ... ... faq-ac';
     }
 }
 
