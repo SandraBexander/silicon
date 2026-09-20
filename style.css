@@ -868,6 +868,7 @@ body {
     a {
         text-decoration: none;
         color: var(--link-color);
+        transition: all .25s;
     }
 
     h2 {
@@ -921,7 +922,9 @@ body {
     }
 
     .af-bot {
-        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
     }
 
     ul {
@@ -973,6 +976,10 @@ body {
         font-size: var(--font-size-s);
         padding: 0.75rem 0;
         border-radius: 8px;
+
+        &:hover {
+            background-color: #494be0;
+        }
     }
 }
 
@@ -1022,6 +1029,12 @@ body {
         margin-top: 20px;
         padding: 0 20px 20px 20px;
         max-height: 50dvh;
+        transition: all .25s;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: all .25s;
+        }
     }
 
     .review-quotes {
@@ -1104,6 +1117,34 @@ body {
                                     'faq-cp faq-cc ... faq-ac'
                                     '... ... ... faq-ac';
         }
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--link-color);
+    }
+
+    p {
+        line-height: 1.5;
+        color: var(--font-color);
+    }
+
+    h4 {
+        font-weight: var(--font-weight-header);
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        color: var(--header-color);
+        font-size: var(--font-size-h4);
+    }
+
+    h6 {
+        font-weight: var(--font-weight-header);
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        color: var(--header-color);
+        font-size: var(--font-size-h6   );
     }
 
     display: flex;
@@ -1281,7 +1322,7 @@ body {
 
             @media (width >= 1400px) {
                 text-align: left;
-                padding: 0;
+                padding: 2rem 0;
             }
         }
     }
@@ -1305,17 +1346,19 @@ body {
 
     .contact-link-768up {
         grid-column: span 6;
+        display: flex;
+        align-items: center;
 
         @media (width < 768px) {
             display: none;
         }
 
-        max-height: 160px;
+        /* max-height: 180px; */
 
         border: 1px solid var(--border-color);
         border-radius: 8px;
 
-        padding: 1.5rem;
+        padding: 1.5rem 1.5rem;
         transition: all 0.25s;
         &:hover {
             text-decoration: none;
@@ -1329,6 +1372,7 @@ body {
 
         p {
             font-size: var(--font-size-s);
+            padding: 1rem 0 1.5rem;
         }
         
     }
