@@ -1399,3 +1399,188 @@ body {
         }
     }
 }
+
+#how-it-works {
+    --hiw-bg: #F3F6FF;
+    --hiw-title: #131022;
+    --hiw-text: #585C7B;
+    --hiw-bg-dark: #0B0F19;
+    --hiw-title-dark: #ffffff;
+    --hiw-text-dark: #B4B7C9;
+
+    background: var(--hiw-bg);
+    font-family: "Manrope", sans-serif;
+    text-align: center;
+    min-width: 280px;
+
+    /* Mobil (390 px) */
+    padding: 65px 15px 58px;
+
+    @media (width >= 768px) {
+        padding: 76px 24px 68px;
+    }
+
+    @media (width >= 1440px) {
+        padding: 58px 24px 97px;
+    }
+
+    .how-inner {
+        width: 100%;
+        margin: 0 auto;
+
+        @media (width >= 1440px) {
+            max-width: 1296px;
+        }
+    }
+
+    /* Rubrik: Figma Heading/H1 på desktop = 40 px, ExtraBold, radhöjd 130 % */
+    h2 {
+        font-size: 28px;      /* mobil – uppskattad, ej bekräftad mot Figma */
+        font-weight: 800;
+        line-height: 1.3;
+        color: var(--hiw-title);
+        margin: 0 auto 31px;
+        max-width: 676.26px;
+
+        @media (width >= 768px) {
+            font-size: 32px;  /* surfplatta – uppskattad, ej bekräftad mot Figma */
+            margin-bottom: 59px;
+        }
+
+        @media (width >= 1440px) {
+            font-size: 40px;  /* desktop – bekräftad */
+            margin-bottom: 91px;
+            min-height: 51.28px;
+        }
+    }
+
+    .phone-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0;
+        width: 100%;
+        margin: 0 auto;
+
+        /* Desktop: tre telefoner i ett rutnät, full storlek */
+        @media (width >= 1440px) {
+            display: grid;
+            grid-template-columns: repeat(3, 328px);
+            align-items: end;
+            gap: 58px;
+            max-width: 1116px;
+        }
+
+        picture {
+            display: block;
+            width: 100%;
+            max-width: 271px;
+
+            /* Mobil: bara en telefon (den sista) */
+            &:not(:last-child) {
+                display: none;
+            }
+
+            /* Tablet: tre telefoner, cirka 204 px breda */
+            @media (width >= 768px) {
+                flex: 0 1 204px;
+                min-width: 0;
+                max-width: 204px;
+
+                &:not(:last-child) {
+                    display: block;
+                }
+            }
+
+            /* Desktop: 328 px breda, mittentelefonen 18 px högre */
+            @media (width >= 1440px) {
+                width: 328px;
+                min-width: 328px;
+                max-width: 328px;
+
+                &:nth-child(2) {
+                    position: relative;
+                    top: -18px;
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .transaction-copy {
+        width: 100%;
+        max-width: 636px;
+        margin: 0 auto;
+
+        /* Underrubrik: Figma Heading/H4 på desktop = 24 px, ExtraBold, radhöjd 140 % */
+        h3 {
+            font-size: 22px;  /* surfplatta/mobil – uppskattad, ej bekräftad mot Figma */
+            font-weight: 800;
+            line-height: 1.4;
+            color: var(--hiw-title);
+            max-width: 290px;
+            margin: 32px auto 13px;
+
+            @media (width >= 768px) {
+                max-width: 425px;
+                margin-top: 51px;
+            }
+
+            @media (width >= 1440px) {
+                font-size: 24px;  /* desktop – bekräftad */
+                max-width: none;
+                margin-top: 4px;
+            }
+        }
+
+        /* Brödtext: Figma Body/M = 16 px, Regular, radhöjd 160 % */
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--hiw-text);
+            max-width: 360px;
+            margin: 0 auto;
+
+            @media (width >= 768px) {
+                max-width: 425px;
+            }
+
+            @media (width >= 1440px) {
+                max-width: 636px;
+            }
+        }
+    }
+
+    .only-desktop,
+    .only-tablet {
+        display: none;
+    }
+
+    @media (width >= 768px) {
+        .only-mobile {
+            display: none;
+        }
+
+        .only-tablet {
+            display: inline;
+        }
+    }
+
+    @media (width >= 1440px) {
+        .not-desktop,
+        .only-tablet {
+            display: none;
+        }
+
+        .only-desktop {
+            display: inline;
+        }
+    }
+}
