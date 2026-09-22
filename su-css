@@ -72,8 +72,8 @@
     --link-color: var(--brand-primary);
     --link-color-alt: #22C55E;
 
-    /* --nav-text-color: var(--gray-800);
-    --nav-text-color-hover: var(--brand-primary); */
+    --nav-text-color: var(--gray-800);
+    --nav-text-color-hover: var(--brand-primary);
     --border-color: var(--gray-300);
     --button-color: var(--gray-100);
     --button-color-toggle: var(--brand-primary);
@@ -85,7 +85,6 @@
     --card-hover-shadow: rgba(19, 16, 34, 0.06);
     --background-color-reviewer-card: white;
     --accordion-arrow-color: #3E4265;
-    --accordion-arrow-color-toggle: white;
     --background-color-testimonials: var(--gray-100);
 
     --font-size-h1: 2.5rem;
@@ -252,13 +251,7 @@ body {
             position: relative;
 
             input {
-                opacity: 0;
-                position: absolute;
-
-                &:focus-visible + .slider {
-                    outline: 2px solid var(--gray-500);
-                    outline-offset: 1px;
-                }
+                display: none;
 
                 &:checked+.slider {
                     background-color: var(--brand-primary);
@@ -318,11 +311,7 @@ body {
 
         .sign-in {
             display: none;
-            border: none;
-            background: transparent;
-            padding: 0;
-            cursor: pointer;
-            
+
             @media (width >=1440px) {
                 display: inline;
                 font-family: var(--standard-font);
@@ -882,7 +871,7 @@ body {
         transition: all .25s;
     }
 
-    h3 {
+    h2 {
         font-size: var(--font-size-h4);
         color: var(--header-color);
         font-weight: var(--font-weight-header);
@@ -957,7 +946,6 @@ body {
 
     .af-header {
         text-wrap: balance;
-        font-size: var(--font-size-h2);
     }
 
     #af-icons {
@@ -1012,7 +1000,7 @@ body {
         max-width: 1296px;
     }
 
-    h2 {
+    h1 {
         grid-column: span 3;
         text-wrap: balance;
         font-size: var(--font-size-h1);
@@ -1141,7 +1129,7 @@ body {
         color: var(--font-color);
     }
 
-    h3 {
+    h4 {
         font-weight: var(--font-weight-header);
         margin: 0;
         padding: 0;
@@ -1174,7 +1162,7 @@ body {
             grid-area: faq-hd;
         }
 
-        h3 {
+        h4 {
             text-align: center;
             padding: 0 30px;
 
@@ -1295,8 +1283,11 @@ body {
     .input-quests:checked + .q-label-button::after {
         background-color: var(--button-color-toggle);
         transition: 0.25s;
-        color: var(--accordion-arrow-color-toggle);
+    }
+
+    .input-quests:checked + .q-label::after {
         transform: rotate(180deg);
+        transition: 0.25s;
     }
 
     @media (width >= 768px) {
@@ -1398,23 +1389,10 @@ body {
         @media (width >= 1400px) {
             grid-column: 3/span 2;
             grid-area: faq-cc;
-                    
-            }
         }
-
-    }
-
-
-/* Qustans sektioner/delar */
-
-
-[data-theme="dark"] {
-    #how-it-works {
-        --hiw-bg: rgba(255, 255, 255, 0.04);
-        --hiw-title: #ffffff;
-        --hiw-text: #B4B7C9;
     }
 }
+
 
 #how-it-works {
     --hiw-bg: #F3F6FF;
@@ -1436,21 +1414,9 @@ body {
         padding: 76px 24px 68px;
     }
 
-
     @media (width >= 1440px) {
         padding: 58px 24px 97px;
-
-body[data-theme="dark"] #how-it-works {
-    --hiw-bg: var(--hiw-bg-dark);
-    --hiw-title: var(--hiw-title-dark);
-    --hiw-text: var(--hiw-text-dark);
-}
-
-body[data-theme="dark"] .subscribe {
-  --subscribe-box-bg: #171a33;
-  --subscribe-field-bg: #0d1024;
-  --subscribe-title: #ffffff;
-}
+    }
 
     .how-inner {
         width: 100%;
@@ -1461,9 +1427,9 @@ body[data-theme="dark"] .subscribe {
         }
     }
 
-    /* Rubrik: Figma Heading/H1 på desktop = 40 px, ExtraBold, radhöjd 130 % */
+
     h2 {
-        font-size: 28px;      /* mobil – uppskattad, ej bekräftad mot Figma */
+        font-size: 28px;      
         font-weight: 800;
         line-height: 1.3;
         color: var(--hiw-title);
@@ -1471,12 +1437,12 @@ body[data-theme="dark"] .subscribe {
         max-width: 676.26px;
 
         @media (width >= 768px) {
-            font-size: 32px;  /* surfplatta – uppskattad, ej bekräftad mot Figma */
+            font-size: 32px;  
             margin-bottom: 59px;
         }
 
         @media (width >= 1440px) {
-            font-size: 40px;  /* desktop – bekräftad */
+            font-size: 40px;  
             margin-bottom: 91px;
             min-height: 51.28px;
         }
@@ -1490,7 +1456,7 @@ body[data-theme="dark"] .subscribe {
         width: 100%;
         margin: 0 auto;
 
-        /* Desktop: tre telefoner i ett rutnät, full storlek */
+        
         @media (width >= 1440px) {
             display: grid;
             grid-template-columns: repeat(3, 328px);
@@ -1504,12 +1470,11 @@ body[data-theme="dark"] .subscribe {
             width: 100%;
             max-width: 271px;
 
-            /* Mobil: bara en telefon (den sista) */
+            
             &:not(:last-child) {
                 display: none;
             }
 
-            /* Tablet: tre telefoner, cirka 204 px breda */
             @media (width >= 768px) {
                 flex: 0 1 204px;
                 min-width: 0;
@@ -1520,7 +1485,7 @@ body[data-theme="dark"] .subscribe {
                 }
             }
 
-            /* Desktop: 328 px breda, mittentelefonen 18 px högre */
+            
             @media (width >= 1440px) {
                 width: 328px;
                 min-width: 328px;
@@ -1546,9 +1511,9 @@ body[data-theme="dark"] .subscribe {
         max-width: 636px;
         margin: 0 auto;
 
-        /* Underrubrik: Figma Heading/H4 på desktop = 24 px, ExtraBold, radhöjd 140 % */
+        
         h3 {
-            font-size: 22px;  /* surfplatta/mobil – uppskattad, ej bekräftad mot Figma */
+            font-size: 22px;  
             font-weight: 800;
             line-height: 1.4;
             color: var(--hiw-title);
@@ -1561,13 +1526,13 @@ body[data-theme="dark"] .subscribe {
             }
 
             @media (width >= 1440px) {
-                font-size: 24px;  /* desktop – bekräftad */
+                font-size: 24px;  
                 max-width: none;
                 margin-top: 4px;
             }
         }
 
-        /* Brödtext: Figma Body/M = 16 px, Regular, radhöjd 160 % */
+       
         p {
             font-size: 16px;
             font-weight: 400;
@@ -1600,7 +1565,6 @@ body[data-theme="dark"] .subscribe {
             display: inline;
         }
     }
-     }
 
     @media (width >= 1440px) {
         .not-desktop,
@@ -1611,344 +1575,18 @@ body[data-theme="dark"] .subscribe {
         .only-desktop {
             display: inline;
         }
-<<<<<<< HEAD
-    };
-  }
- 
-body[data-theme="dark"] .subscribe {
-    --subscribe-box-bg: #171a33;
-    --subscribe-field-bg: #0d1024;
-    --subscribe-title: #ffffff;
-    --subscribe-copyright: #9a9cc8;
-}
-
-.subscribe {
-  --subscribe-box-bg: #F3F6FF;
-  --subscribe-field-bg: #ffffff;
-  --subscribe-title: #14162b;
-  --subscribe-copyright: #9a9cc8;
-}
-
-@media (prefers-color-scheme: dark) {
-  .subscribe {
-    --subscribe-box-bg: #171a33;
-    --subscribe-field-bg: #0d1024;
-    --subscribe-title: #ffffff;
-    --subscribe-copyright: #9a9cc8;
-  }
-}
-
-body[data-theme="dark"] .subscribe {
-  --subscribe-box-bg: #171a33;
-  --subscribe-field-bg: #0d1024;
-  --subscribe-title: #ffffff;
-  --subscribe-copyright: #9a9cc8;
-}
-
-.subscribe {
-  padding: 44px 12px 32px;
-}
-
-.subscribe .subscribe-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-
-  width: 100%;
-  max-width: 1296px;
-  min-height: 156px;
-
-  margin: 0 auto;
-  padding: 32px 24px;
-
-  box-sizing: border-box;
-  background: var(--subscribe-box-bg);
-  border-radius: 8px;
-
-  text-align: center;
-}
-
-.subscribe .subscribe-bell {
-  display: block;
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.subscribe .subscribe-title {
-  margin: 0;
-
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1.3;
-
-  color: var(--subscribe-title);
-}
-
-.subscribe .subscribe-form {
-  display: flex;
-
-  width: 100%;
-  max-width: 472px;
-  height: 52px;
-
-  flex-shrink: 0;
-}
-
-.subscribe .subscribe-field {
-  flex: 1;
-  min-width: 0;
-}
-
-.subscribe .subscribe-field input {
-  display: block;
-
-  width: 100%;
-  height: 52px;
-
-  padding: 0 14px;
-
-  border: 1px solid #dfe3f2;
-  border-right: 0;
-  border-radius: 8px 0 0 8px;
-
-  box-sizing: border-box;
-
-  background: var(--subscribe-field-bg);
-  color: var(--subscribe-title);
-
-  font-family: inherit;
-  font-size: 14px;
-  outline: none;
-}
-
-.subscribe .subscribe-field input:focus {
-  outline: none;
-  border-color: #6366f1;
-}
-
-.subscribe .subscribe-form button {
-  width: 100px;
-  height: 52px;
-
-  flex-shrink: 0;
-
-  border: 0;
-  border-radius: 0 8px 8px 0;
-
-  background: #6366f1;
-  color: #ffffff;
-
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-
-
-
-@media (min-width: 768px) {
-
-  .subscribe {
-    padding: 44px 31px 32px;
-  }
-
-  .subscribe .subscribe-grid {
-    flex-direction: row;
-
-    justify-content: space-between;
-    align-items: center;
-
-    min-height: 156px;
-
-    padding: 0 64px;
-
-    text-align: left;
-  }
-
-  /* Bell + title should stay together */
-  .subscribe .subscribe-title {
-    flex: 1;
-    max-width: 430px;
-  }
-
-  .subscribe .subscribe-form {
-    width: 472px;
-    max-width: 472px;
-  }
-}
-
-
-@media (min-width: 1440px) {
-
-  .subscribe .subscribe-grid {
-    min-height: 156px;
-
-    padding-left: 80px;
-    padding-right: 64px;
-  }
-
-  .subscribe .subscribe-title {
-    font-size: 20px;
-  }
-
-  .subscribe .subscribe-form {
-    width: 472px;
-    max-width: 472px;
-  }
-=======
     }
 }
 
+[data-theme="dark"] #how-it-works {
+    background: var(--hiw-bg-dark);
 
-.subscribe {
-    --subscribe-box-bg: #F3F6FF;
-    --subscribe-field-bg: #ffffff;
-    --subscribe-title: #4251f4;
-    --subscribe-copyright: #9a9cc8;
-}
-
-[data-theme="dark"] {
-    .subscribe {
-        --subscribe-box-bg: #171a33;
-        --subscribe-field-bg: #0d1024;
-        --subscribe-title: #ffffff;
-        --subscribe-copyright: #9a9cc8;
-    }
-}
-
-.subscribe {
-    padding: 44px 12px 32px;
-}
-
-.subscribe .subscribe-grid {
-    display: grid;
-    grid-template-columns: 78px 1fr;
-    align-items: center;
-    column-gap: 13px;
-    row-gap: 39px;
-    max-width: 1296px;
-    margin: 0 auto;
-    padding: 51px 18px 35px;
-    background: var(--subscribe-box-bg, #F3F6FF);
-    border-radius: 8px;
-}
-
-.subscribe .subscribe-bell {
-    display: block;
-    width: 78px;
-    height: 78px;
-    object-fit: contain;
-}
-
-.subscribe .subscribe-title {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 1.4;
-    color: var(--subscribe-title, #14162b);
-}
-
-.subscribe .subscribe-form {
-    display: flex;
-    grid-column: 1 / -1;
-}
-
-.subscribe .subscribe-field {
-    flex: 1;
-}
-
-.subscribe .subscribe-field input {
-    width: 100%;
-    height: 48px;
-    padding: 0 14px;
-    border: 0;
-    border-radius: 8px 0 0 8px;
-    box-sizing: border-box;
-    background: var(--subscribe-field-bg);
-    color: var(--subscribe-title);
-    font-family: inherit;
-    font-size: 14px;
-}
-
-.subscribe .subscribe-form button {
-    width: 113px;
-    height: 48px;
-    border: 0;
-    border-radius: 0 8px 8px 0;
-    background: #6366f1;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-@media (min-width: 768px) {
-    .subscribe {
-        padding: 44px 31px 32px;
+    h2,
+    h3 {
+        color: var(--hiw-title-dark);
     }
 
-    .subscribe .subscribe-grid {
-        grid-template-columns: 78px 1fr 318px;
-        column-gap: 30px;
-        min-height: 223px;
-        padding: 0 27px;
+    p {
+        color: var(--hiw-text-dark);
     }
-
-    .subscribe .subscribe-form {
-        grid-column: auto;
-    }
-}
-
-@media (min-width: 1440px) {
-    .subscribe .subscribe-grid {
-        grid-template-columns: 78px 1fr 478px;
-        column-gap: 37px;
-        min-height: 222px;
-        padding: 0 94px 0 108px;
-
-        .subscribe .subscribe-title {
-            font-size: 24px;
-            text-align: left;
-        }
-
-        --hiw-bg: #F3F6FF;
-        --hiw-title: #131022;
-        --hiw-text: #585C7B;
-        --hiw-bg-dark: #0B0F19;
-        --hiw-title-dark: #ffffff;
-        --hiw-text-dark: #B4B7C9;
-
-        font-family: "Manrope", sans-serif;
-        text-align: center;
-        min-width: 280px;
-
-        /* Mobil (390 px) */
-        padding: 65px 15px 58px;
-
-        @media (width >=768px) {
-            padding: 76px 24px 68px;
-        }
-
-        @media (width >=1440px) {
-            padding: 58px 24px 97px;
-        }
-    }
-}
-
-#footer {
-    text-align: center;
-
-    & .copyright {
-        margin: 0;
-        padding: 0 12px 32px;
-        color: #9397AD;
-        font-size: 13px;
-    }
->>>>>>> origin/main
 }

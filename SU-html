@@ -3,18 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="New generation mobile banking app for managing all your money, in one place">
-    <meta name="keywords" content="Banking, App, Money, Fintech, e-commerce">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Grupp 1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-
-  <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="darkfix-final.css">
- <script src="darkmode.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="darkmode.js" defer></script>
     <title>Silicon</title>
-    <link rel="icon" href="/ssets/icons/logo.svg" type="image/svg+xml">
 </head>
 
 <body data-theme="">
@@ -22,7 +15,7 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo-container">
-                    <img src="./assets/icons/logo.svg" alt="Brand logo" class="logo"> <span> Silicon </span>
+                    <img src="./assets/icons/logo.svg" alt="Logo" class="logo"> <span> Silicon </span>
                 </div>
 
                 <div class="switch-and-button">
@@ -34,15 +27,14 @@
                     </label>
 
                     <button class="menu" aria-label="Öppna meny">
-                        <svg aria-hidden="true">
+                         <svg aria-hidden="true">
                             <use href="./assets/icons/hamburger-menu.svg"> </use>
                         </svg>
                     </button>
 
-
-                    <button class="sign-in" type="button">
+                    <a class="sign-in" href="#">
                         <img src="./assets/icons/btn.svg" alt="Sign In">
-                    </button>
+                    </a>
                 </div>
             </nav>
         </div>
@@ -58,23 +50,23 @@
                         <span class="tablet-break"><br></span>
                         Save, spend & manage money in your pocket.
                     </p>
-
+        
                     <div class="store-buttons">
                         <a href="https://apple.com/app-store" target="_blank">
-                            <img class="store-light" src="assets/img/applight.svg.svg" alt="App Store button">
-                            <img class="store-dark" src="assets/img/appdark.svg.svg" alt="App Store button">
+                            <img class="store-light" src="assets/img/applight.svg.svg" alt="App Store">
+                            <img class="store-dark" src="assets/img/appdark.svg.svg" alt="App Store">
                         </a>
 
                         <a href="https://play.google.com/store" target="_blank">
-                            <img class="store-light" src="assets/img/googlelight.svg.svg" alt="Google Play button">
-                            <img class="store-dark" src="assets/img/googledark.svg.svg" alt="Google Play button">
+                            <img class="store-light" src="assets/img/googlelight.svg.svg" alt="Google Play">
+                            <img class="store-dark" src="assets/img/googledark.svg.svg" alt="Google Play">
                         </a>
                     </div>
                 </div>
 
                 <div class="phones">
-                    <img src="assets/img/bakre tel.svg" class="phone-back" alt="Phone, app with your cards">
-                    <img src="assets/img/främre tel.svg" class="phone-front" alt="">
+                    <img src="assets/img/bakre tel.svg" class="phone-back" alt="bakre telefon">
+                    <img src="assets/img/främre tel.svg" class="phone-front" alt="främre telefon">
                 </div>
             </div>
         </section>
@@ -121,8 +113,7 @@
 
         <section id="features">
             <div class="container">
-                <img class="featuresImg" src="./assets/images/app-features-phone.png"
-                    alt="Phone, app card transactions">
+                <img class="featuresImg" src="./assets/images/app-features-phone.png" alt="Phone app card transactions">
 
                 <div class="content">
                     <div class="header">
@@ -218,23 +209,22 @@
             </div>
         </section>
 
-        <!-- How does it works -->
         <section id="how-it-works">
             <div class="how-inner">
                 <h2>How Does It Work?</h2>
 
                 <div class="phone-row">
                     <picture>
-                        <img src="image/iPhone 12 Pro.png" alt="Banking app screen, 1 of 3" width="328" height="663">
+                        <img src="assets/images/hiw-budget.png" alt="Banking app screen, 1 of 3" width="328" height="663">
                     </picture>
 
                     <picture>
-                        <img src="image/iPhone 12 Pro@2x.png" alt="Banking app screen, 2 of 3" width="328" height="663">
+                        <img src="assets/images/hiw-cards.png" alt="Banking app screen, 2 of 3" width="328" height="663">
                     </picture>
 
                     <picture>
-                        <source media="(max-width: 767px)" srcset="image/ram.png">
-                        <img src="image/iPhone 12 Pro..png" alt="Banking app screen, 3 of 3" width="328" height="663">
+                        <source media="(max-width: 767px)" srcset="assets/images/hiw-mobile.png">
+                        <img src="assets/images/hiw-transfer.png" alt="Banking app screen, 3 of 3" width="328" height="663">
                     </picture>
                 </div>
 
@@ -245,45 +235,43 @@
                         <span class="only-mobile">Transfers to people from your contact list</span>
                     </h3>
                     <p>
-                        <span class="only-desktop">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu
-                            sociis tristique quisque hac in consectetur condimentum.</span>
-                        <span class="not-desktop">Proin volutpat mollis egestas. Nam luctus facilisis ultrices.
-                            Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</span>
+                        <span class="only-desktop">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</span>
+                        <span class="not-desktop">Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</span>
                     </p>
                 </div>
             </div>
         </section>
 
         <section id="app-features"> <!--Includes the entire app features section.-->
-            <div class="grid-12">
+            <section class="grid-12">
                 <div id="af-top-left" class="af-top">
-                    <h3 class="af-header">Make your money transfer simple and clear</h3>
+                    <h2 class="af-header">Make your money transfer simple and clear</h2>
 
-                        <ul id="af-list">
-                            <li><i class="bi bi-check-circle"></i> Banking transactions are free for you</li>
-                            <li><i class="bi bi-check-circle"></i> No monthly cash commission</li>
-                            <li><i class="bi bi-check-circle"></i> Manage payments and transactions online</li>
-                        </ul>
+                    <ul id="af-list">
+                        <li><i class="bi bi-check-circle"></i> Banking transactions are free for you</li>
+                        <li><i class="bi bi-check-circle"></i> No monthly cash commission</li>
+                        <li><i class="bi bi-check-circle"></i> Manage payments and transactions online</li>
+                    </ul>
 
-                        <a href="https://en.wikipedia.org/wiki/Gullibility" class="af-learn-more">Learn more <i
-                                class="bi bi-arrow-right-short"></i></a>
+                    <a href="https://en.wikipedia.org/wiki/Gullibility" class="af-learn-more">Learn more <i class="bi bi-arrow-right-short"></i></a>
                 </div>
-
+                             
                 <div id="af-top-right">
                     <img src="assets/images/money-graph-img.svg" alt="Money Graph">
                 </div>
 
 
                 <div id="af-bot-left" class="af-bot">
-                    <img src="./assets/images/contact-list-credit.png" alt="Contacts in app">
+                    <img src="./assets/images/contact-list-credit.png" alt="Contacts">
                 </div>
 
                 <div id="af-bot-right" class="af-bot">
-                    <h3 class="af-header">Receive payments from international bank details</h3>
+                    <h2 class="af-header">Receive payments from international bank details</h2>
 
                     <div id="af-icons" class="features-grid">
                         <div id="af-card"><img src="assets/icons/card-icon.svg" alt="Card icon"></div>
                         <div id="af-wallet"><img src="assets/icons/wallet-icon.svg" alt="Wallet icon"></div>
+
                     </div>
 
                     <div id="af-text" class="features-grid">
@@ -291,22 +279,23 @@
                         <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
                     </div>
 
-                    <a href="https://en.wikipedia.org/wiki/Gullibility" class="af-learn-more">Learn more <i
-                            class="bi bi-arrow-right-short"></i></a>
+                    <a href="https://en.wikipedia.org/wiki/Gullibility" class="af-learn-more">Learn more <i class="bi bi-arrow-right-short"></i></a>
                 </div>
-
-            </div>
+                
+            </section>
         </section>
 
         <section id="testimonials">
             <div class="testimonials-container grid-12">
-                <h2>
+
+                <h1>
                     Clients are Loving Our App
-                </h2>
+                </h1>
 
                 <div class="reviews" id="review1">
 
-                    <img class="review-quotes" src="assets/icons/review-quotes.svg" alt="Quotes icon for testimonials">
+                    <img class="review-quotes" src="assets/icons/review-quotes.svg"
+                        alt="icon of quotes for testimonials">
 
                     <div class="review-stars">
                         <i class="bi bi-star-fill"></i>
@@ -326,7 +315,7 @@
                     <div class="reviewer">
                         <a href="https://emoji.gg/emoji/3468-skype-emo"><img
                                 src="https://cdn3.emoji.gg/emojis/3468-skype-emo.gif" width="40px" height="40px"
-                                alt="Skype emo emoji"></a>
+                                alt="skype_emo"></a>
                         <div>
                             <h6>Fannie Summers</h6>
                             <p>Designer</p>
@@ -336,7 +325,9 @@
                 </div>
 
                 <div class="reviews" id="review2">
-                    <img class="review-quotes" src="assets/icons/review-quotes.svg" alt="Quotes icon for testimonials">
+
+                    <img class="review-quotes" src="assets/icons/review-quotes.svg"
+                        alt="icon of quotes for testimonials">
 
                     <div class="review-stars">
                         <i class="bi bi-star-fill"></i>
@@ -356,23 +347,25 @@
                     <div class="reviewer">
                         <a href="https://emoji.gg/emoji/9706-skype-blahblahblah"><img
                                 src="https://cdn3.emoji.gg/emojis/9706-skype-blahblahblah.gif" width="40px"
-                                height="40px" alt="Skype blah blah blah emoji"></a>
+                                height="40px" alt="skype_blahblahblah"></a>
                         <div>
                             <h6>Alberto Floresso</h6>
                             <p>Developer</p>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </section>
 
         <section id="faq"> <!--Includes the entire FAQ section.-->
-            <div class="grid-12">
-                <section id="faq-header"> <!--Header section.-->
-                    <h3>
-                        Any questions? Check out the FAQs
-                    </h3>
-                </section>
+            <section class="grid-12">
+                    <section id="faq-header"> <!--Header section.-->
+                        <h4>
+                            Any questions? Check out the FAQs
+                        </h4>
+                    </section>
 
                 <section id="faq-accordion"> <!-- Accordion section -->
 
@@ -383,15 +376,9 @@
                         </label>
 
                         <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, quidem! Voluptatem,
-                                suscipit. Consequuntur doloribus excepturi consequatur. Adipisci, aliquam consectetur.
-                                Commodi reprehenderit quas quo vero, tempora aspernatur minus ratione sint illo minima
-                                voluptatibus libero qui, nihil dolorem similique repudiandae facere reiciendis ullam est
-                                esse?
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, quidem! Voluptatem, suscipit. Consequuntur doloribus excepturi consequatur. Adipisci, aliquam consectetur. Commodi reprehenderit quas quo vero, tempora aspernatur minus ratione sint illo minima voluptatibus libero qui, nihil dolorem similique repudiandae facere reiciendis ullam est esse?
                                 <br><br>
-                                Eveniet fuga delectus voluptate cumque numquam magni cupiditate aperiam vero accusantium
-                                eum. Quibusdam placeat, fuga quo nostrum, saepe perspiciatis rerum recusandae, labore
-                                vero necessitatibus repellendus dolores?
+                                Eveniet fuga delectus voluptate cumque numquam magni cupiditate aperiam vero accusantium eum. Quibusdam placeat, fuga quo nostrum, saepe perspiciatis rerum recusandae, labore vero necessitatibus repellendus dolores?
                             </p>
                         </div>
                     </div>
@@ -403,11 +390,7 @@
                         </label>
 
                         <div class="faq-answer">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam numquam repellat at
-                                veritatis iste? Ducimus, ratione doloribus. Saepe sint, ducimus atque vero temporibus
-                                recusandae dolore quaerat dignissimos numquam accusamus, similique molestias iure. Iste,
-                                cumque sapiente minus recusandae esse cupiditate! Est adipisci pariatur corporis nobis!
-                                Voluptas architecto est fugit quaerat veniam?
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam numquam repellat at veritatis iste? Ducimus, ratione doloribus. Saepe sint, ducimus atque vero temporibus recusandae dolore quaerat dignissimos numquam accusamus, similique molestias iure. Iste, cumque sapiente minus recusandae esse cupiditate! Est adipisci pariatur corporis nobis! Voluptas architecto est fugit quaerat veniam?
                             </p>
                         </div>
                     </div>
@@ -420,10 +403,7 @@
 
                         <div class="faq-answer">
                             <p>
-                                𒁮 𒁯 𒁰 𒁱 𒁲 𒁳 𒁴 𒁵 𒁶 𒁷 𒁸 𒁹 𒁺 𒁻 𒁼 𒁽 𒁾 𒁿 𒂀 𒂁 𒂂 𒂃 𒂄 𒂅 𒂆 𒂇 𒂈 𒂉 𒂊
-                                𒂋 𒂌 𒂍 𒂎 𒂏 𒂐 𒂑 𒂒 𒂓 𒂔 𒂕 𒂖 𒂗 𒂘 𒂙 𒂚 𒂛 𒂜 𒂝 𒂞 𒂟 𒂠 𒂡 𒂢 𒂣 𒂥 𒂦 𒂭 𒂮
-                                𒂯 𒂰 𒂱 𒂲 𒂳 𒂴 𒂵 𒂶 𒂷 𒃬 𒃭 𒃮 𒃯 𒃰 𒃱 𒃲 𒃳 𒃴 𒃵 𒃶 𒃷 𒃸 𒃹 𒃺 𒃻 𒃼 𒃽 𒃾 𒃿
-                                𒄀 𒄁 𒄂 𒄃 𒄄
+                                𒁮 𒁯 𒁰 𒁱 𒁲 𒁳 𒁴 𒁵 𒁶 𒁷 𒁸 𒁹 𒁺 𒁻 𒁼 𒁽 𒁾 𒁿 𒂀 𒂁 𒂂 𒂃 𒂄 𒂅 𒂆 𒂇 𒂈 𒂉 𒂊 𒂋 𒂌 𒂍 𒂎 𒂏 𒂐 𒂑 𒂒 𒂓 𒂔 𒂕 𒂖 𒂗 𒂘 𒂙 𒂚 𒂛 𒂜 𒂝 𒂞 𒂟 𒂠 𒂡 𒂢 𒂣 𒂥 𒂦 𒂭 𒂮 𒂯 𒂰 𒂱 𒂲 𒂳 𒂴 𒂵 𒂶 𒂷 𒃬 𒃭 𒃮 𒃯 𒃰 𒃱 𒃲 𒃳 𒃴 𒃵 𒃶 𒃷 𒃸 𒃹 𒃺 𒃻 𒃼 𒃽 𒃾 𒃿 𒄀 𒄁 𒄂 𒄃 𒄄
                             </p>
                         </div>
                     </div>
@@ -435,9 +415,7 @@
                         </label>
 
                         <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum odio similique
-                                autem, veniam nisi, consequatur debitis vitae praesentium sed quia sapiente repellat
-                                neque rerum fugiat ducimus.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto earum odio similique autem, veniam nisi, consequatur debitis vitae praesentium sed quia sapiente repellat neque rerum fugiat ducimus.</p>
                         </div>
                     </div>
 
@@ -448,13 +426,9 @@
                         </label>
 
                         <div class="faq-answer">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, optio ratione fuga
-                                nobis provident perferendis laborum quis ipsum eaque sed sequi ducimus voluptatem
-                                aliquam neque sit.
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, optio ratione fuga nobis provident perferendis laborum quis ipsum eaque sed sequi ducimus voluptatem aliquam neque sit.
                                 <br><br>
-                                Natus dolore minima minus doloribus perferendis unde nostrum ratione placeat rerum
-                                deserunt harum sit cupiditate sequi, voluptas officia ad eveniet quo vero quas incidunt!
-                                Enim nobis et ratione aliquam, unde iste.
+                                 Natus dolore minima minus doloribus perferendis unde nostrum ratione placeat rerum deserunt harum sit cupiditate sequi, voluptas officia ad eveniet quo vero quas incidunt! Enim nobis et ratione aliquam, unde iste.
                             </p>
                         </div>
                     </div>
@@ -483,46 +457,25 @@
                 <section id="faq-contact-mobile">
                     <a href="#" target="_blank" title="Contact us now">Contact us now</a>
                 </section>
-                <a href="https://en.wikipedia.org/wiki/Gullibility" target="_blank" title="Phone us!" id="contact-phone"
-                    class="contact-link-768up">
+                <a href="https://en.wikipedia.org/wiki/Gullibility" target="_blank" title="Phone us!" id="contact-phone" class="contact-link-768up">
                     <div>
-                        <img src="assets/icons/phone-icon.svg" alt="Phone dialing icon" width="30rem">
+                        <img src="assets/icons/phone-icon.svg" alt="phone-icon" width="30rem">
                         <p>Still have questions?</p>
                         Contact us <i class="bi bi-arrow-right-short"></i>
                     </div>
                 </a>
-                <a href="https://en.wikipedia.org/wiki/Gullibility" target="_blank" title="Chat with us!"
-                    id="contact-chat" class="contact-link-768up">
+                <a href="https://en.wikipedia.org/wiki/Gullibility" target="_blank" title="Chat with us!" id="contact-chat" class="contact-link-768up">
                     <div>
-                        <img src="assets/icons/chat-icon.svg" alt="Chat bubble icon" width="30§rem">
+                        <img src="assets/icons/chat-icon.svg" alt="chat-icon" width="30§rem">
                         <p>Still have questions?</p>
                         Contact us <i class="bi bi-arrow-right-short"></i>
                     </div>
                 </a>
-            </div>
+            </section>
         </section>
-
-        <section class="subscribe" aria-labelledby="subscribe-title">
-            <div class="container">
-                <div class="subscribe-grid" style="max-width: 1296px; margin: 0 auto;">
-        
-                    <img class="subscribe-bell" src="image/bell.svg" alt="" width="78" height="78">
-                    <h2 id="subscribe-title" class="subscribe-title">
-                        Subscribe to our newsletter to stay informed about latest updates
-                    </h2>
-        
-                    <form class="subscribe-form">
-                        <div class="subscribe-field">
-                            <input type="email" placeholder="Your Email" aria-label="Email address" required>
-                        </div>
-                        <button type="submit">Subscribe</button>
-                    </form>
-        
-                </div>
-            </div>
-    
     </main>
 
     <footer></footer>
 </body>
+
 </html>
