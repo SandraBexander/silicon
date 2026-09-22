@@ -72,8 +72,8 @@
     --link-color: var(--brand-primary);
     --link-color-alt: #22C55E;
 
-    --nav-text-color: var(--gray-800);
-    --nav-text-color-hover: var(--brand-primary);
+    /* --nav-text-color: var(--gray-800);
+    --nav-text-color-hover: var(--brand-primary); */
     --border-color: var(--gray-300);
     --button-color: var(--gray-100);
     --button-color-toggle: var(--brand-primary);
@@ -85,6 +85,7 @@
     --card-hover-shadow: rgba(19, 16, 34, 0.06);
     --background-color-reviewer-card: white;
     --accordion-arrow-color: #3E4265;
+    --accordion-arrow-color-toggle: white;
     --background-color-testimonials: var(--gray-100);
 
     --font-size-h1: 2.5rem;
@@ -1294,11 +1295,8 @@ body {
     .input-quests:checked + .q-label-button::after {
         background-color: var(--button-color-toggle);
         transition: 0.25s;
-    }
-
-    .input-quests:checked + .q-label::after {
+        color: var(--accordion-arrow-color-toggle);
         transform: rotate(180deg);
-        transition: 0.25s;
     }
 
     @media (width >= 768px) {
