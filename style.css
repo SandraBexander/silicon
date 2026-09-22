@@ -317,7 +317,11 @@ body {
 
         .sign-in {
             display: none;
-
+            border: none;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+            
             @media (width >=1440px) {
                 display: inline;
                 font-family: var(--standard-font);
