@@ -1,0 +1,28 @@
+/* Denna fil tvingar fram dark mode för How Does It Work och Subscribe,
+   oavsett vad som står i style.css. Länka den EFTER style.css i index.html. */
+
+body[data-theme="dark"] #how-it-works {
+    background: #0B0F19 !important;
+}
+
+body[data-theme="dark"] #how-it-works h2,
+body[data-theme="dark"] #how-it-works h3 {
+    color: #ffffff !important;
+}
+
+body[data-theme="dark"] #how-it-works p {
+    color: #B4B7C9 !important;
+}
+
+body[data-theme="dark"] .subscribe .subscribe-grid {
+  background: #171a33 !important;
+}
+
+body[data-theme="dark"] .subscribe .subscribe-field input {
+  background: #0d1024 !important;
+  color: #ffffff !important;
+}
+
+body[data-theme="dark"] .subscribe .subscribe-title {
+  color: #ffffff !important;
+}
