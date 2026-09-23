@@ -1398,11 +1398,9 @@ body {
         @media (width >= 1400px) {
             grid-column: 3/span 2;
             grid-area: faq-cc;
-                    
-            }
         }
-
     }
+}
 
 
 /* Qustans sektioner/delar */
@@ -1436,21 +1434,9 @@ body {
         padding: 76px 24px 68px;
     }
 
-
     @media (width >= 1440px) {
         padding: 58px 24px 97px;
-
-body[data-theme="dark"] #how-it-works {
-    --hiw-bg: var(--hiw-bg-dark);
-    --hiw-title: var(--hiw-title-dark);
-    --hiw-text: var(--hiw-text-dark);
-}
-
-body[data-theme="dark"] .subscribe {
-  --subscribe-box-bg: #171a33;
-  --subscribe-field-bg: #0d1024;
-  --subscribe-title: #ffffff;
-}
+    }
 
     .how-inner {
         width: 100%;
@@ -1600,7 +1586,6 @@ body[data-theme="dark"] .subscribe {
             display: inline;
         }
     }
-     }
 
     @media (width >= 1440px) {
         .not-desktop,
@@ -1611,196 +1596,6 @@ body[data-theme="dark"] .subscribe {
         .only-desktop {
             display: inline;
         }
-<<<<<<< HEAD
-    };
-  }
- 
-body[data-theme="dark"] .subscribe {
-    --subscribe-box-bg: #171a33;
-    --subscribe-field-bg: #0d1024;
-    --subscribe-title: #ffffff;
-    --subscribe-copyright: #9a9cc8;
-}
-
-.subscribe {
-  --subscribe-box-bg: #F3F6FF;
-  --subscribe-field-bg: #ffffff;
-  --subscribe-title: #14162b;
-  --subscribe-copyright: #9a9cc8;
-}
-
-@media (prefers-color-scheme: dark) {
-  .subscribe {
-    --subscribe-box-bg: #171a33;
-    --subscribe-field-bg: #0d1024;
-    --subscribe-title: #ffffff;
-    --subscribe-copyright: #9a9cc8;
-  }
-}
-
-body[data-theme="dark"] .subscribe {
-  --subscribe-box-bg: #171a33;
-  --subscribe-field-bg: #0d1024;
-  --subscribe-title: #ffffff;
-  --subscribe-copyright: #9a9cc8;
-}
-
-.subscribe {
-  padding: 44px 12px 32px;
-}
-
-.subscribe .subscribe-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-
-  width: 100%;
-  max-width: 1296px;
-  min-height: 156px;
-
-  margin: 0 auto;
-  padding: 32px 24px;
-
-  box-sizing: border-box;
-  background: var(--subscribe-box-bg);
-  border-radius: 8px;
-
-  text-align: center;
-}
-
-.subscribe .subscribe-bell {
-  display: block;
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.subscribe .subscribe-title {
-  margin: 0;
-
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1.3;
-
-  color: var(--subscribe-title);
-}
-
-.subscribe .subscribe-form {
-  display: flex;
-
-  width: 100%;
-  max-width: 472px;
-  height: 52px;
-
-  flex-shrink: 0;
-}
-
-.subscribe .subscribe-field {
-  flex: 1;
-  min-width: 0;
-}
-
-.subscribe .subscribe-field input {
-  display: block;
-
-  width: 100%;
-  height: 52px;
-
-  padding: 0 14px;
-
-  border: 1px solid #dfe3f2;
-  border-right: 0;
-  border-radius: 8px 0 0 8px;
-
-  box-sizing: border-box;
-
-  background: var(--subscribe-field-bg);
-  color: var(--subscribe-title);
-
-  font-family: inherit;
-  font-size: 14px;
-  outline: none;
-}
-
-.subscribe .subscribe-field input:focus {
-  outline: none;
-  border-color: #6366f1;
-}
-
-.subscribe .subscribe-form button {
-  width: 100px;
-  height: 52px;
-
-  flex-shrink: 0;
-
-  border: 0;
-  border-radius: 0 8px 8px 0;
-
-  background: #6366f1;
-  color: #ffffff;
-
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-
-
-
-@media (min-width: 768px) {
-
-  .subscribe {
-    padding: 44px 31px 32px;
-  }
-
-  .subscribe .subscribe-grid {
-    flex-direction: row;
-
-    justify-content: space-between;
-    align-items: center;
-
-    min-height: 156px;
-
-    padding: 0 64px;
-
-    text-align: left;
-  }
-
-  /* Bell + title should stay together */
-  .subscribe .subscribe-title {
-    flex: 1;
-    max-width: 430px;
-  }
-
-  .subscribe .subscribe-form {
-    width: 472px;
-    max-width: 472px;
-  }
-}
-
-
-@media (min-width: 1440px) {
-
-  .subscribe .subscribe-grid {
-    min-height: 156px;
-
-    padding-left: 80px;
-    padding-right: 64px;
-  }
-
-  .subscribe .subscribe-title {
-    font-size: 20px;
-  }
-
-  .subscribe .subscribe-form {
-    width: 472px;
-    max-width: 472px;
-  }
-=======
     }
 }
 
@@ -1950,5 +1745,4 @@ body[data-theme="dark"] .subscribe {
         color: #9397AD;
         font-size: 13px;
     }
->>>>>>> origin/main
 }
